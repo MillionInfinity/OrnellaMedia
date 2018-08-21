@@ -1,0 +1,13 @@
+@import "variables.scss";
+#bg-img{
+    background:url('../img/op.png');
+    background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+     height: 102vh;
+    &#triangle{
+      background:url('../img/aman.png');
+      z-index: 110;
+    
+}
+}

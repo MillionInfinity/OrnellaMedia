@@ -1,0 +1,40 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "description": "A website for video Editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MillionInfinity/OrnellaMedia.git"
+  },
+  "keywords": [
+    "ornella",
+    "Habesha",
+    "wedding",
+    "camera man",
+    "Photographer"
+  ],
+  "author": "Million Asseghegn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MillionInfinity/OrnellaMedia/issues"
+  },
+  "homepage": "https://github.com/MillionInfinity/OrnellaMedia#readme",
+  "devDependencies": {
+    "grunt-browserify": "^5.3.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-eslint": "^21.0.0",
+    "jshint": "^2.9.6",
+    "matchdep": "^2.0.0"
+  },
+  "dependencies": {
+    "node-sass": "^4.9.3",
+    "sass-cache": "0.0.3"
+  }
+}

@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  color: #8a8787; }
+
+.main-nav {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  float: left;
+  font-weight: 300; }
+
+.nav-list {
+  padding-top: 8vh;
+  color: #ababab;
+  margin-left: 2rem; }
+
+.right-nav {
+  font-family: "Kristi", cursive; }
+
+.central-nav {
+  background: url("../img/nav.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  color: #8a8787; }
+
+.main-nav {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  float: left;
+  font-weight: 300; }
+
+.nav-list {
+  padding-top: 8vh;
+  color: #ababab;
+  margin-left: 2rem; }
+
+.right-nav {
+  font-family: "Kristi", cursive; }
+
+.central-nav {
+  background: url("../img/nav.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover; }
+
+#bg-img {
+  background: url("../img/op.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 102vh; }
+  #bg-img#triangle {
+    background: url("../img/aman.png");
+    z-index: 110; }
+
+/*# sourceMappingURL=main.css.map */
