@@ -1,13 +1,58 @@
 @import "variables.scss";
+@import "mixin.scss";
 #bg-img{
-    background:url('../img/op.png');
+    background:url('../img/3R5.jpg');
+    // background:url('../img/3R4C1098.jpg');
+    // background:url('../img/3R5.jpg');
     background-repeat: no-repeat;
      background-attachment: fixed;
      background-size: cover;
      height: 102vh;
-    &#triangle{
-      background:url('../img/aman.png');
-      z-index: 110;
-    
+     @include easeOut();
+     
+.welcome:hover{
+      box-shadow: rgba(0, 0, 0, 0.5);
+      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
+      -webkit-filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
 }
+
 }
+.lowerflower{
+  position: absolute;
+  left:80%;
+  margin-top: -205px;
+}
+.instagram{
+  position:relative;
+  top:150px;
+  width:100%;
+  line-height:5em;
+//  margin-left:35%;
+  border-top:1px solid #9f9f9f;
+  border-bottom:1px solid #9f9f9f;
+  p{
+    margin-left:40%;
+  }
+}
+// .mySlides {
+//   position:fixed;
+//   display: none;
+// }
+.instagram::after{
+  content: '';
+  position: absolute;
+  border-top: 1px solid #9f9f9f;
+  border-bottom: 1px solid #9f9f9f;
+  top: -18px;
+  left: -18px;
+  right: -18px;
+  bottom: -18px;
+}
+
+.welcome img {
+  width:24rem;
+}
+// .lwerlogo{
+//   position:absolute;
+//   margin-top: -212px;
+// }

@@ -6,28 +6,56 @@
 body{
       color: $primary;
 } 
- 
- .main-nav {
-     font-family: $mainfont;
-     display: flex;
-     float: left;
-     font-weight: 300; 
-//   font-size:1.2rem;
- }
- .nav-list {
-     padding-top: 8vh;
-     color: $maincolor;
-     margin-left: 2rem;
-        }
-    
+  
      .right-nav {
-         font-family: $curfont;
-    //   color:;
+        // font-family: $curfont;
+        margin-top:20px;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repear(1fr  1fr);
+        grid-template-areas :
+     'legend legend'
+     'bioimage bioimage'
+      'nav1 nav2';
+     
+     div.line{
+      grid-area: bioimage;
+      position:relative;
+      background:$primary;
+      height: 2px;
+      width:25rem;
+      top:2.9rem;
      }
-
+     .legend{
+         position:relative;
+         grid-area: legend;
+         padding-left:13%;
+         top:6rem;
+     }
+     &div.follow{
+       grid-area:nav1;
+     }
+     &div.icon{
+       grid-area: nav2;
+       
+    }
+     i.fab {
+         color: $primary;
+         font-size:1.2rem;
+         margin-right:10px;
+     }
+    }
 .central-nav{
-    background: $home-img;
-    background-repeat: no-repeat;
-     background-attachment: scroll;
-     background-size: cover;
+       line-height:1.5;
+       img{
+           margin-left:25%;
+       }
+              .orn{
+              font-family:$amanfont;
+               font-size:2.5rem;
+            }
+            .creative{
+                font-size:1.2rem; 
+                margin-left:15%;
+            }
 }
