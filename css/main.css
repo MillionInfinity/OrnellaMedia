@@ -131,11 +131,11 @@ body {
     margin-left: 15%; }
 
 #bg-img {
-  background: url("../img/3R5.jpg");
+  background: url("../img/3R4.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 102vh;
+  height: 110vh;
   transition: all 1.5s ease-out;
   -webkit-transition: all 1.5s ease-out;
   -moz-transition: all 1.5s ease-out;
@@ -172,7 +172,15 @@ body {
   bottom: -18px; }
 
 .welcome img {
-  width: 24rem; }
+  width: 23rem;
+  margin: 1px;
+  z-index: 150; }
+
+.textAman {
+  text-align: center; }
+
+.lowerlogo {
+  height: 10rem; }
 
 * {
   box-sizing: border-box; }
@@ -254,18 +262,17 @@ body {
     .main-nav .n3 {
       margin-top: 5rem; }
     .main-nav a {
-      color: white;
+      color: #665f5f;
       font-size: 1.2rem;
       text-decoration-line: none;
       text-align: center;
-      text-shadow: 2px 2px 4px #000000;
       -moz-text-decoration-style: none;
       -moz-text-decoration-line: none; }
 
   .threeIn1 {
+    top: 15rem;
     display: grid;
     grid-gap: 2rem;
-    margin-top: 25px;
     margin-left: 25rem;
     grid-template-columns: repeat(3, 265px);
     grid-template-areas: 'd d d ' '- e e ' 'a b c'; }
@@ -337,5 +344,79 @@ body {
   text-align: center;
   z-index: 10;
   transform: translateZ(0); }
+
+.galies {
+  width: 650px; }
+
+#four {
+  width: 650px;
+  margin-top: 5px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense; }
+
+span.close {
+  position: absolute;
+  top: 15%;
+  left: 72%;
+  z-index: 150;
+  zoom: 1.5; }
+
+.wed-title {
+  font-family: "Trajan Pro Regular", Helvetica, Arial, sans-serif;
+  margin-top: 3rem; }
+  .wed-title span {
+    font-family: "Kristi", cursive; }
+
+.wed-main-title {
+  font-weight: 100;
+  margin: 2rem;
+  font-family: "Kristi", cursive;
+  font-size: 5.5rem;
+  font-stretch: extra-expanded; }
+
+.marrage {
+  background: url("./../img/africa.png");
+  weight: 100%;
+  height: 8rem;
+  border-top: 1.5px solid #ababab;
+  border-bottom: 1.5px solid #ababab;
+  margin-top: 5rem; }
+  .marrage p {
+    margin-top: 2%;
+    margin-left: 25%;
+    font-weight: 100;
+    font-family: "Kristi", cursive;
+    font-size: 2.5rem;
+    font-stretch: extra-expanded; }
+
+#gallery-footer {
+  margin-top: -5rem; }
+
+.logoGallery {
+  float: right;
+  margin-top: -210px;
+  margin-right: 2%; }
+
+.wedground {
+  background: url("./../img/opd.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.enground {
+  background: url("./../img/11.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.gradground {
+  background: url("./../img/17.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+img.eng {
+  position: relative;
+  left: 81.5%;
+  margin: 0px; }
 
 /*# sourceMappingURL=main.css.map */
