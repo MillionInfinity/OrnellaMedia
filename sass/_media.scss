@@ -50,20 +50,22 @@
       }
 
       & a {
-          color: white;
+          color:#665f5f;
           font-size: 1.2rem;
           text-decoration-line: none;
           text-align: center;
           //margin-bottom: -150px;
-          text-shadow: 2px 2px 4px #000000;
+        //   text-shadow: 2px 2px 4px #000000;
           -moz-text-decoration-style: none;
           -moz-text-decoration-line: none;
       }
   }
   .threeIn1{
+  
+      top:15rem;
       display:grid;
       grid-gap:2rem;
-      margin-top: 25px;
+    //   margin-top: 25px;
       margin-left:25rem;
       grid-template-columns: repeat(3, 265px);
       grid-template-areas: 

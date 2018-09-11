@@ -1,13 +1,13 @@
 @import "variables.scss";
 @import "mixin.scss";
 #bg-img{
-    background:url('../img/3R5.jpg');
+    background:url('../img/3R4.jpg');
     // background:url('../img/3R4C1098.jpg');
     // background:url('../img/3R5.jpg');
     background-repeat: no-repeat;
      background-attachment: fixed;
      background-size: cover;
-     height: 102vh;
+     height: 110vh;
      @include easeOut();
      
 .welcome:hover{
@@ -50,9 +50,15 @@
 }
 
 .welcome img {
-  width:24rem;
+  width:23rem;
+  margin:1px;
+  z-index: 150;
 }
-// .lwerlogo{
-//   position:absolute;
-//   margin-top: -212px;
-// }
+
+.textAman{
+  text-align: center;
+}
+
+.lowerlogo{
+height: 10rem;
+}
