@@ -38,18 +38,23 @@ span.close {
 .marrage{
     background: url('./../img/africa.png');
     weight:100%;
-    height: 8rem;
-    border-top: 1.5px solid $maincolor;
-    border-bottom: 1.5px solid $maincolor;
-    margin-top: 5rem;
+    height: 10rem;
+    // border-top: 1.5px solid $maincolor;
+    // border-bottom: 1.5px solid $maincolor;
+    margin-top: 2rem;
     p{
-         margin-top:2%;
-         margin-left:25%;
+        //  margin-top:2%;
+         margin-left:23%;
          font-weight:100;
          font-family: $curfont;
          font-size: 2.5rem;
          font-stretch: extra-expanded;
     }
+}
+p.marriage{
+    position: absolute;
+    margin-top:60px;
+    margin-left:7%;
 }
 
 #gallery-footer{
@@ -77,8 +82,15 @@ span.close {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.lowerlogo{
+   background: url("./../img/africa.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   width:100%;
+   height: 10rem;
+}
 img.eng{
     position:relative;
-    left:81.5%;
+   right:-100rem;
     margin:0px;
 }

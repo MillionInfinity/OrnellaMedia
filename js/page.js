@@ -1,6 +1,6 @@
 "use strict";
 let $= require('jquery');
-let ornImage=require('./fetch');
+
 
 
 const nav = document.getElementById('test');
@@ -8,8 +8,8 @@ function homePage() {
     let navdisplay = $(
         `<header id="my-header">
         <div class="main-nav">
-            <div class="navlink n1"><a href="#">Home</a></div>
-            <div class="navlink n2"><a href="#">Assist</a></div>
+            <div class="navlink n1"><a href="index.html">Home</a></div>
+            <div class="navlink n2"><a href="contactme.html">Aman</a></div>
             <div class="navlink n3"><a href="#">Gallery</a></div>
             <div class="navlink n4"><a href="#">Contact us</a></div>
             <div class="navlink n5"><a href="#">Divisions</a></div>
@@ -29,8 +29,8 @@ function homePage() {
             <a href="#!"><i class="fab fa-github fa-2x"></i></a>
             </div> 
         </div> 
-        </header>
-         `);
+        </header>`)
+         ;
 
     $("#test").html(navdisplay);
 }
@@ -100,19 +100,88 @@ $('.main-home').hide();
  return gallery();
 });
 });
-const gallery=()=>{
-    console.log("we");
- let choose=`<div>
- <a href="gallery.html"><div class="wedground"><img src="./img/wedding.png" alt="trianle aman" width="300px"></div></a>
- <div class="enground"><img  class="eng p-2" src="./img/engagmet.png" alt="trianle aman" width="300px"></div>
- <div class="gradground"><img src="./img/graduation.png" alt="trianle aman" width="300px"></div>
- </div>  `;
-  $('#tri').append(choose);
+$(document).ready(function () {
+    $(".n3").click(function () {
+        // $('.contactme"').remove();
+        $('.main-home').hide();
+        return gallery();
+    });
+});
+// const loadQuote = () => {
+//     var qoates = new XMLHttpRequest();
+//     qoates.open("GET", "ornella.json");
+//     qoates.onload = function () {
+//         var ourQoate = JSON.parse(qoates.responseText);
+//         // gallery(ourQoate);
+//     };
+//     qoates.send();
+// };
+// loadQuote();
+
+const gallery=()=> {
+    console.log("hi");
+    let choose=`<div class="galleries">
+     <div class="wedground"><a href="gallery.html"><img src="./img/wedding.png" alt="trianle aman" width="300px"></a></div>
+     <div class="enground"><a href=""><img  class="eng p-2" src="./img/engagmet.png" alt="trianle aman" width="300px"></a></div>
+     <div class="gradground"><a href=""><img src="./img/graduation.png" alt="trianle aman" width="300px"></a></div>
+     <div class="marrage">
+     <p class="marriage">“You know when you have found your prince because you not only have a smile on your face, but in your heart as well.."</p>
+     <img class="logoGallery" src="./img/logoflower2.png" alt="textlogo" width="250px">
+     </div>
+     <div id="gallery-footer"></div>
+     </div>`;
+      $('#tri').append(choose);
 };
+// gallery();
+
+// const galleryHtml=(data)=>{
+// let asmara = [];
+//    for (let qout in data){
+     
+//      const eritrea=data[qout];
+//      asmara.push(eritrea);
+//      console.log("eritrea", asmara );
+
+      
+//        $("#tri").html(asmara);
+// }
+//     $("#tri").append(asmara);
+// };
+// galleryHtml();
+$(document).ready(function () {
+    $(".n2").click(function () {
+        $('.main-home').hide();
+        $(".galleries").hide();
+        return aman();
+    });
+});
+
+// const aman=()=>{
+//  console.log("hi aman");
+//   let amanz=`<div class="contactm">
+   
+//    <div class="amanzeru text-center">
+// <p class="amanmess"> Hi My name is Aman,</p>
+// <p class="zerumess"> Nice to meet you, I 'm a very passionate Wedding photographer and videographer <span>for 
+// Eritreans and Ethiopians! </span> I’ve always loved taking pictures. </p>
+//     <div>
+//       <a class="welaman"> <img id="visitor" src="./img/aman.png" alt="trianle aman" width="300px"></a>
+//     </div>
+//    </div>
+//   <div class="marrage">
+//      <p class="marriage">“You know when you have found your prince because you not only have a smile on your face, but in your heart as well.."</p>
+//      <img class="logoGallery" src="./img/logoflower2.png" alt="textlogo" width="250px">
+//      </div>
+//      <div id="gallery-footer"></div>
+//  </div>`;
+//     $('#contactme').html(amanz);
+// };
+
 
 module.exports={
     home,
     footer,
     homePage,
-    // welcome
+//    loadQuote,
+   gallery
 };

@@ -8,6 +8,7 @@ let page=require ('./page'),
     // console.log("home page is loading");
     page.home();
     page.footer();
+ 
     });
    
     $("#visitor").click(()=>{
