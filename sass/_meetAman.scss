@@ -1,0 +1,33 @@
+@import "variables";
+
+.amanzeru{
+    background:url(".././img/amanzeru.jpg");
+    background-size:cover;
+    height:950px;
+    
+}
+
+.welaman img {
+    width: 23rem;
+    margin: 1px;
+    z-index: 150;
+}
+.amanmess{
+    position: absolute;
+    font-family: $amanfont;
+    margin-left:40%;
+    margin-top:5%;
+    font-size: 2.6rem;
+    line-height: 2;
+    font-stretch: ultra-expanded;
+    text-transform:uppercase;
+}
+
+.zerumess{
+     position: absolute;
+     font-family: $amanfont;
+     margin-left:12%;
+     margin-top:10%;
+     font-size: 1.1rem;
+     font-stretch: ultra-expanded;
+}
