@@ -6,28 +6,31 @@
 
  .fi{
      margin-left:150px;
+     margin-top:-3rem;
  }
  .footer2 {
      display: flex;
-     margin-top: 3rem;
+    //  margin-top: 3rem;
      position: absolute;
      background-color: rgba(lighten($silverGold, 2), 0.5);
+    left:0px;
      width:100%;
-     padding: 1rem 0rem  1rem 35rem;
+     padding:1rem 0rem 1rem 35rem;
+
      z-index: -1;
 
      .f {
          padding-left: 4rem;
      }
     }
-    .million {
-        position:relative;
-        bottom: 0;
-        padding-top:115px;
-        left: -10%;
-        width: 100%;
-        // padding: 10px;
-        text-align: center;
-        z-index: 10;
-        transform: translateZ(0);
-    }
+    // .million {
+    //     position:relative;
+    //     bottom: 0;
+    //     padding-top:115px;
+    //     left: -10%;
+    //     width: 100%;
+    //     // padding: 10px;
+    //     text-align: center;
+    //     z-index: 10;
+    //     transform: translateZ(0);
+    // }

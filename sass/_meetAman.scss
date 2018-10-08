@@ -1,33 +1,48 @@
 @import "variables";
 
-.amanzeru{
-    background:url(".././img/amanzeru.jpg");
-    background-size:cover;
-    height:950px;
-    
-}
 
+#bg-aman {
+    background: url('../img/amanzeru.jpg');
+    background-repeat: no-repeat;
+    background-attachment: relative;
+    background-size: cover;
+    height: 110vh;
+    @include easeOut();
+
+    .welcome:hover {
+        box-shadow: rgba(0, 0, 0, 0.5);
+        filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
+        -webkit-filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
+    }
+
+}
 .welaman img {
     width: 23rem;
     margin: 1px;
     z-index: 150;
+  
 }
-.amanmess{
-    position: absolute;
-    font-family: $amanfont;
-    margin-left:40%;
-    margin-top:5%;
-    font-size: 2.6rem;
-    line-height: 2;
-    font-stretch: ultra-expanded;
-    text-transform:uppercase;
+
+.amanzeru{
+    position: relative;
+    top:-900px;
+    //   background: rgba(lighten($silverGold, 2), 0.4);
+    //  padding:0.1rem 0rem 1rem 0rem;
+    //  color;
+    .amanmess {
+        font-family: $amanfont;
+        margin-left: 45%;
+        // margin-top: 10%;
+        font-size: 2rem;
+        line-height: 0.1;
+        font-stretch: ultra-expanded;
+        text-transform: uppercase;
+    }
 }
 
 .zerumess{
-     position: absolute;
      font-family: $amanfont;
      margin-left:12%;
-     margin-top:10%;
      font-size: 1.1rem;
      font-stretch: ultra-expanded;
 }
