@@ -10395,6 +10395,39 @@ const loadOrnella=()=>{
       xhttp.send();
     };
  loadOrnella();
+
+
+// const loadEng=()=>{
+//     var xhttp = new XMLHttpRequest();
+//     xhttp.onreadystatechange = function () {
+//         if (this.readyState == 4 && this.status == 200) {
+//             var response = JSON.parse(xhttp.responseText);
+//             var enga = response.engagement;
+//             console.log("enga",enga);
+//             // return people;
+//             let ornimage = [];
+//             for (let i = 0; i <enga.length; i++) {
+//                 let onimage = enga[i];
+//                 // console.log("people", onimage);
+//                 // ornimage += `<div class="gallery">`;
+//                 // ornimage += `<img class="galies" src="${onimage.img}">`;
+//                 // ornimage += `</div>`;
+//                 $('#engu').html(ornimage);
+//             }
+//         }
+
+//     };
+//     xhttp.open("GET", "ornella.json", true);
+//     xhttp.send();
+// };
+
+
+$(".enground").click(function(){
+    console.log("laila baby");
+    // loadEng();
+});
+
+
 // const loadQuote = () => {
 //     var qoates= new XMLHttpRequest();
 //     qoates.open("GET", "ornella.json");
@@ -10420,11 +10453,67 @@ const loadOrnella=()=>{
 // };
 // gallery();
 
+const loadBranch = () => {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(xhttp.responseText);
+            var people = response.branches;
+            // console.log(people);
+            // return people;
+            let ornimage = [];
+            for (let brancho= 0; brancho< people.length; brancho++) {
+                let onimage = people[brancho];
+                // console.log("people", onimage);
+                   ornimage += `<div id="infobtn" class="branc col-lg-3 col-md- col-sm-3" data-toggle="modal" data-target="#brancho-${brancho}">`;
+                   ornimage +=`<p class="bra-loc">${onimage.location}</p>`;
+                   ornimage +=`<div class="branc-img"></div>`;
+                   ornimage +=`</div>`;
+                   ornimage += `<div class="modal fade modalStyle" id="brancho-${brancho}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">`;
+                   ornimage += `<div class="modal-dialog" role="document">`;
+                   ornimage += `<div class="modal-content">`;
+                   ornimage += `<div class="modal-header">`;
+                   ornimage += `<h5 class="modal-title" id="${brancho}exampleModalLabel">${onimage.location} Branch</h5>`;
+                   ornimage += `<button type="button" class="close" data-dismiss="modal" aria-label="Close">`;
+                   ornimage += `<span aria-hidden="true">&times;</span>`;
+                   ornimage += `</button>`;
+                   ornimage += `</div>`;
+                   ornimage += `<div class="modal-body">`;
 
+                   ornimage += `<img  src="${onimage.imgs}" width="80px" height="80px">`;
+                   ornimage += `<p class="b-name">${onimage.name}</p>`;
+                   ornimage += `<p class="ebs">Phone Number :- <em>${onimage.tele}</em></p>`;
+                   ornimage += `<p class="ebs">${onimage.do}</p>`;
+                   ornimage += `<p class="ebs">${onimage.location}</p>`;
+                   ornimage += `<div class="bran-img"></div>`;
+                   ornimage += `</div>`;
+                   ornimage += `<div class="modal-footer">`;
+                //    ornimage += `<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>`;
+                   ornimage += `<button type="button" class="btn btn-primary con-btn">Contact</button>`;
+                   ornimage += `</div>`;
+                   ornimage += `</div>`;
+                   ornimage += `</div>`;
+                   ornimage += `</div>`;
+               
+                $('#branching').html(ornimage);
+            }
+        }
+
+    };
+    xhttp.open("GET", "ornella.json", true);
+    xhttp.send();
+};
+loadBranch();
+$("document").ready(function(){
+$(".con-btn").click(function(){
+    console.log("contact info clicked");
+});
+});
 
 module.exports = {
     loadOrnella,
 // loadQuote,
+// loadEng,
 
 };
 
@@ -10438,7 +10527,7 @@ let page=require ('./page'),
 
     $(document).ready(()=>{
     // console.log("home page is loading");
-    page.home();
+    // page.home();
     page.footer();
  
     });
@@ -10468,10 +10557,10 @@ function homePage() {
         `<header id="my-header">
         <div class="main-nav">
             <div class="navlink n1"><a href="index.html">Home</a></div>
-            <div class="navlink n2"><a href="contactme.html">Aman</a></div>
+            <div class="navlink n2"><a href="aman.html">Aman</a></div>
             <div class="navlink n3"><a href="#">Gallery</a></div>
-            <div class="navlink n4"><a href="#">Contact us</a></div>
-            <div class="navlink n5"><a href="#">Divisions</a></div>
+            <div class="navlink n4"><a href="contactme.html">Contact us</a></div>
+            <div class="navlink n5"><a href="branch.html">Divisions</a></div>
         </div> 
         <div class="central-nav">
             <a href="index.html"><img src="img/logoflower2.png" class="img-fluid" alt="ornella logo" width="150px"></a>
@@ -10483,9 +10572,9 @@ function homePage() {
             <div class="line"></div> 
             <div class="follow"> follow me on social media </div>
             <div class="icons">
-            <a href="#!"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="#!"><i class="fab fa-linkedin fa-2x"></i></a> 
-            <a href="#!"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://twitter.com/amanzerumesfin"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.instagram.com/aman_zeru/"><i class="fab fa-instagram fa-2x"></i></a> 
+            <a href="https://www.facebook.com/begieZgreat/"><i class="fab fa-facebook fa-2x"></i></a>
             </div> 
         </div> 
         </header>`)
@@ -10494,49 +10583,6 @@ function homePage() {
     $("#test").html(navdisplay);
 }
 homePage();
-
-function home() {
-    let mainpage = (`
-    <div class="main-home">
-    <div id="bg-img">
-    <a class="welcome"><img id="visitor" src="./img/threeshape.png" alt="trianle aman" width="300px"></a>
-    </div>
- 
-    <div>
-     <img src="./img/africa.png" alt="trianle aman" width="100%" class="lowerlogo">
-     <a href="#!"><img src="./img/logoflower2.png" alt="trianle aman" width="15%" class="lowerflower"></a>
-    </div>
-    <div class="threeIn1">
-    <div class="d text-center">
-    <p>RECORDING <span>authentic</span>AND <span>intimate </span> TRADITIONAL WEDDINGS AS THEY ARE IN HOME</p>
-    </div>
-    <div class="e"><img src="./img/logodesign.png" alt="textlogo" width="250px"></div>
-    <div class="a tinone"><img src="./img/1plk.jpg" alt="spill" width="220px"><p class="textAman">Meet Aman</p></div>
-    <div class="b tinone"><img src="./img/1plc.jpg" alt="spill" width="220px"></div>
-    <div class="c tinone"><img src="./img/1plc.jpg" alt="spill" width="220px"></div>
-    </div>
-    <div class="instagram"><p> follow along on instagram @suzannenevillphotography</p></div>
-      </div>  `);
-
-    $("#tri").html(mainpage);
-}
-
-// var myIndex = 0;
-// carousel();
-
-// function carousel() {
-//     var i;
-//     var x = document.getElementById("bg-img");
-//     for (i = 0; i < x.length; i++) {
-//         x[i].style.display = "none";
-//     }
-//     myIndex++;
-//     if (myIndex > x.length) { myIndex = 1 }
-//     x[myIndex - 1].style.display = "block";
-//     setTimeout(carousel, 5000); // Change image every 2 seconds
-// }
-
-
 
 const footer = () => {
 let footerh = `<div class="footer">
@@ -10549,100 +10595,42 @@ let footerh = `<div class="footer">
                 <div class="f">Gallery</div>
                 <div class="f">Branches Address</div>
                 </div> 
-                <div class="million">Design by Million Asseghegn </div>               
-                 </div>`;
+                </div>`;
     $("#footer").html(footerh);
 };
-$(document).ready(function () {
-$(".welcome").click(function () {
-$('.main-home').hide();  
- return gallery();
-});
-});
-$(document).ready(function () {
-    $(".n3").click(function () {
-        // $('.contactme"').remove();
-        $('.main-home').hide();
-        return gallery();
-    });
-});
-// const loadQuote = () => {
-//     var qoates = new XMLHttpRequest();
-//     qoates.open("GET", "ornella.json");
-//     qoates.onload = function () {
-//         var ourQoate = JSON.parse(qoates.responseText);
-//         // gallery(ourQoate);
-//     };
-//     qoates.send();
-// };
-// loadQuote();
+footer();
 
 const gallery=()=> {
     console.log("hi");
     let choose=`<div class="galleries">
      <div class="wedground"><a href="gallery.html"><img src="./img/wedding.png" alt="trianle aman" width="300px"></a></div>
-     <div class="enground"><a href=""><img  class="eng p-2" src="./img/engagmet.png" alt="trianle aman" width="300px"></a></div>
-     <div class="gradground"><a href=""><img src="./img/graduation.png" alt="trianle aman" width="300px"></a></div>
-     <div class="marrage">
-     <p class="marriage">“You know when you have found your prince because you not only have a smile on your face, but in your heart as well.."</p>
-     <img class="logoGallery" src="./img/logoflower2.png" alt="textlogo" width="250px">
-     </div>
-     <div id="gallery-footer"></div>
-     </div>`;
-      $('#tri').append(choose);
+     <div class="enground"><a ><img src="./img/engagmet.png" class="eng" alt="trianle aman" width="300px"></a></div>
+     <div class="gradground"><a href="#"><img src="./img/graduation.png" alt="trianle aman" width="300px"></a></div>
+     <div>
+     <img src="./img/africa.png" alt="trianle aman" width="100%" class="lowerlogo">
+     <a href="#!"><img src="./img/logoflower2.png" alt="trianle aman" width="15%" class="lowerflower"></a>
+    </div>     
+     <div class="zerumess d">
+    <p class="marriage">“You know when you have found your prince because you not only have a smile on your face, but in your heart as well.."</p>
+    </div> 
+    <div class="instagram"><p> follow along on instagram @aman_zeru</p></div>
+    </div>`;
+      $('#tri').html(choose);
 };
-// gallery();
 
-// const galleryHtml=(data)=>{
-// let asmara = [];
-//    for (let qout in data){
-     
-//      const eritrea=data[qout];
-//      asmara.push(eritrea);
-//      console.log("eritrea", asmara );
 
-      
-//        $("#tri").html(asmara);
-// }
-//     $("#tri").append(asmara);
-// };
-// galleryHtml();
-$(document).ready(function () {
-    $(".n2").click(function () {
-        $('.main-home').hide();
-        $(".galleries").hide();
-        return aman();
-    });
+$(".n3").click(function(){
+    console.log("gallery button clicked");
+    $(".main-home").remove();
+// $(".all-pic").remove();
+   return gallery();
 });
-
-// const aman=()=>{
-//  console.log("hi aman");
-//   let amanz=`<div class="contactm">
-   
-//    <div class="amanzeru text-center">
-// <p class="amanmess"> Hi My name is Aman,</p>
-// <p class="zerumess"> Nice to meet you, I 'm a very passionate Wedding photographer and videographer <span>for 
-// Eritreans and Ethiopians! </span> I’ve always loved taking pictures. </p>
-//     <div>
-//       <a class="welaman"> <img id="visitor" src="./img/aman.png" alt="trianle aman" width="300px"></a>
-//     </div>
-//    </div>
-//   <div class="marrage">
-//      <p class="marriage">“You know when you have found your prince because you not only have a smile on your face, but in your heart as well.."</p>
-//      <img class="logoGallery" src="./img/logoflower2.png" alt="textlogo" width="250px">
-//      </div>
-//      <div id="gallery-footer"></div>
-//  </div>`;
-//     $('#contactme').html(amanz);
-// };
 
 
 module.exports={
-    home,
     footer,
     homePage,
-//    loadQuote,
-   gallery
+//    gallery
 };
 
 },{"jquery":1}]},{},[4]);

@@ -6,7 +6,7 @@ let page=require ('./page'),
 
     $(document).ready(()=>{
     // console.log("home page is loading");
-    page.home();
+    // page.home();
     page.footer();
  
     });
