@@ -11,7 +11,7 @@ function homePage() {
             <div class="navlink n1"><a href="index.html">Home</a></div>
             <div class="navlink n2"><a href="aman.html">Aman</a></div>
             <div class="navlink n3"><a href="#">Gallery</a></div>
-            <div class="navlink n4"><a href="contactme.html">Contact us</a></div>
+            <div class = "navlink n4" > <a href="http://localhost/ornella/OrnellaMedia/contact.php">Contact us</a> </div>
             <div class="navlink n5"><a href="branch.html">Divisions</a></div>
         </div> 
         <div class="central-nav">
