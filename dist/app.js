@@ -1,4 +1,273 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+"use strict";
+
+
+},{}],2:[function(require,module,exports){
+"use strict";
+// let data=require('./data');
+const loadOrnella=()=>{
+ var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(xhttp.responseText);
+            var people = response.ornellas;
+            // console.log(people);
+            // return people;
+            let ornimage=[];
+            for(let i=0; i<people.length; i++){
+                let onimage=people[i];
+                // console.log("people", onimage);
+                ornimage+=`<div class="gallery">`;
+                ornimage+= `<img class="galies" src="${onimage.img}">`;
+                ornimage+=`</div>`;
+                $('#four').html(ornimage);
+            }
+          }
+
+      };
+      xhttp.open("GET", "ornella.json", true);
+      xhttp.send();
+    };
+ loadOrnella();
+
+
+// const loadEng=()=>{
+//     var xhttp = new XMLHttpRequest();
+//     xhttp.onreadystatechange = function () {
+//         if (this.readyState == 4 && this.status == 200) {
+//             var response = JSON.parse(xhttp.responseText);
+//             var enga = response.engagement;
+//             console.log("enga",enga);
+//             // return people;
+//             let ornimage = [];
+//             for (let i = 0; i <enga.length; i++) {
+//                 let onimage = enga[i];
+//                 // console.log("people", onimage);
+//                 // ornimage += `<div class="gallery">`;
+//                 // ornimage += `<img class="galies" src="${onimage.img}">`;
+//                 // ornimage += `</div>`;
+//                 $('#engu').html(ornimage);
+//             }
+//         }
+
+//     };
+//     xhttp.open("GET", "ornella.json", true);
+//     xhttp.send();
+// };
+
+
+$(".enground").click(function(){
+    console.log("laila baby");
+    // loadEng();
+});
+
+
+// const loadQuote = () => {
+//     var qoates= new XMLHttpRequest();
+//     qoates.open("GET", "ornella.json");
+//     qoates.onload=function(){
+//         var ourQoate=JSON.parse(qoates.responseText);
+//        console.log(ourQoate);
+//        gallery(qoates);
+//     }
+//    qoates.send();
+// };
+// const gallery=(data)=> {
+//     console.log("hi");
+//     let choose=`<div>
+//      <div class="wedground"><a href="gallery.html"><img src="./img/wedding.png" alt="trianle aman" width="300px"></a></div>
+//      <div class="enground"><a href=""><img  class="eng p-2" src="./img/engagmet.png" alt="trianle aman" width="300px"></a></div>
+//      <div class="gradground"><a href=""><img src="./img/graduation.png" alt="trianle aman" width="300px"></a></div>
+//      <div class="lowerlogo"></div>
+
+//      <h1 id="article">hellow</h1>
+//      <div id="gallery-footer"></div>
+//      </div>`;
+//       $('#tri').append(choose);
+// };
+// gallery();
+
+const loadBranch = () => {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(xhttp.responseText);
+            var people = response.branches;
+            // console.log(people);
+            // return people;
+            let ornimage = [];
+            for (let brancho= 0; brancho< people.length; brancho++) {
+                let onimage = people[brancho];
+                // console.log("people", onimage);
+                   ornimage += `<div id="infobtn" class="branc col-lg-3 col-md- col-sm-3" data-toggle="modal" data-target="#brancho-${brancho}">`;
+                   ornimage +=`<p class="bra-loc">${onimage.location}</p>`;
+                   ornimage +=`<div class="branc-img"></div>`;
+                   ornimage +=`</div>`;
+                   ornimage += `<div class="modal fade modalStyle" id="brancho-${brancho}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">`;
+                   ornimage += `<div class="modal-dialog" role="document">`;
+                   ornimage += `<div class="modal-content">`;
+                   ornimage += `<div class="modal-header">`;
+                   ornimage += `<h5 class="modal-title" id="${brancho}exampleModalLabel">${onimage.location} Branch</h5>`;
+                   ornimage += `<button type="button" class="close" data-dismiss="modal" aria-label="Close">`;
+                   ornimage += `<span aria-hidden="true">&times;</span>`;
+                   ornimage += `</button>`;
+                   ornimage += `</div>`;
+                   ornimage += `<div class="modal-body">`;
+
+                   ornimage += `<img  src="${onimage.imgs}" width="80px" height="80px">`;
+                   ornimage += `<p class="b-name">${onimage.name}</p>`;
+                   ornimage += `<p class="ebs">Phone Number :- <em>${onimage.tele}</em></p>`;
+                   ornimage += `<p class="ebs">${onimage.do}</p>`;
+                   ornimage += `<p class="ebs">${onimage.location}</p>`;
+                   ornimage += `<div class="bran-img"></div>`;
+                   ornimage += `</div>`;
+                   ornimage += `<div class="modal-footer">`;
+                //    ornimage += `<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>`;
+                   ornimage += `<button type="button" class="btn btn-primary con-btn">Contact</button>`;
+                   ornimage += `</div>`;
+                   ornimage += `</div>`;
+                   ornimage += `</div>`;
+                   ornimage += `</div>`;
+               
+                $('#branching').html(ornimage);
+            }
+        }
+
+    };
+    xhttp.open("GET", "ornella.json", true);
+    xhttp.send();
+};
+loadBranch();
+$("document").ready(function(){
+$(".con-btn").click(function(){
+    console.log("contact info clicked");
+});
+});
+
+module.exports = {
+    loadOrnella,
+// loadQuote,
+// loadEng,
+
+};
+
+
+},{}],3:[function(require,module,exports){
+"use strict";
+let page=require ('./page'),
+    fetching=require('./fetch'),
+    data=require('./data'),
+    ornella=require('./ornella');
+
+    $(document).ready(()=>{
+    // console.log("home page is loading");
+    // page.home();
+    page.footer();
+ 
+    });
+   
+    $("#visitor").click(()=>{
+        console.log("galler is visitor");
+    
+    });
+
+    $(".n3").click(() => {
+        console.log("galler is ready");
+
+    });
+
+},{"./data":1,"./fetch":2,"./ornella":4,"./page":5}],4:[function(require,module,exports){
+"use strict";
+
+},{}],5:[function(require,module,exports){
+"use strict";
+let $= require('jquery');
+
+
+
+const nav = document.getElementById('test');
+function homePage() {
+    let navdisplay = $(
+        `<header id="my-header">
+        <div class="main-nav">
+            <div class="navlink n1"><a href="index.html">Home</a></div>
+            <div class="navlink n2"><a href="aman.html">Aman</a></div>
+            <div class="navlink n3"><a href="#">Gallery</a></div>
+            <div class = "navlink n4" > <a href="http://localhost/ornella/OrnellaMedia/contact.php">Contact us</a> </div>
+            <div class="navlink n5"><a href="branch.html">Divisions</a></div>
+        </div> 
+        <div class="central-nav">
+            <a href="index.html"><img src="img/logoflower2.png" class="img-fluid" alt="ornella logo" width="150px"></a>
+            <div class="orn">Ornella Multi-Media</div>
+            <div class="creative">Creative Photographer and Videographer</div>
+        </div> 
+        <div class="right-nav"> 
+            <div class="legend">Habesha Photographer & Videographer</div>
+            <div class="line"></div> 
+            <div class="follow"> follow me on social media </div>
+            <div class="icons">
+            <a href="https://twitter.com/amanzerumesfin"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.instagram.com/aman_zeru/"><i class="fab fa-instagram fa-2x"></i></a> 
+            <a href="https://www.facebook.com/begieZgreat/"><i class="fab fa-facebook fa-2x"></i></a>
+            </div> 
+        </div> 
+        </header>`)
+         ;
+
+    $("#test").html(navdisplay);
+}
+homePage();
+
+const footer = () => {
+let footerh = `<div class="footer">
+                 <div class="fi">
+                <img src="./img/logoflower2.png" alt="textlogo" width="150px">
+                </div>
+               <div class="footer2">
+                <div class="f">Home</div>
+                <div class="f">Contact Aman</div>
+                <div class="f">Gallery</div>
+                <div class="f">Branches Address</div>
+                </div> 
+                </div>`;
+    $("#footer").html(footerh);
+};
+footer();
+
+const gallery=()=> {
+    console.log("hi");
+    let choose=`<div class="galleries">
+     <div class="wedground"><a href="gallery.html"><img src="./img/wedding.png" alt="trianle aman" width="300px"></a></div>
+     <div class="enground"><a ><img src="./img/engagmet.png" class="eng" alt="trianle aman" width="300px"></a></div>
+     <div class="gradground"><a href="#"><img src="./img/graduation.png" alt="trianle aman" width="300px"></a></div>
+     <div>
+     <img src="./img/africa.png" alt="trianle aman" width="100%" class="lowerlogo">
+     <a href="#!"><img src="./img/logoflower2.png" alt="trianle aman" width="15%" class="lowerflower"></a>
+    </div>     
+     <div class="zerumess d">
+    <p class="marriage">“You know when you have found your prince because you not only have a smile on your face, but in your heart as well.."</p>
+    </div> 
+    <div class="instagram"><p> follow along on instagram @aman_zeru</p></div>
+    </div>`;
+      $('#tri').html(choose);
+};
+
+
+$(".n3").click(function(){
+    console.log("gallery button clicked");
+    $(".main-home").remove();
+// $(".all-pic").remove();
+   return gallery();
+});
+
+
+module.exports={
+    footer,
+    homePage,
+//    gallery
+};
+
+},{"jquery":6}],6:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.3.1
  * https://jquery.com/
@@ -10364,273 +10633,4 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}],2:[function(require,module,exports){
-"use strict";
-
-
-},{}],3:[function(require,module,exports){
-"use strict";
-// let data=require('./data');
-const loadOrnella=()=>{
- var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            var response = JSON.parse(xhttp.responseText);
-            var people = response.ornellas;
-            // console.log(people);
-            // return people;
-            let ornimage=[];
-            for(let i=0; i<people.length; i++){
-                let onimage=people[i];
-                // console.log("people", onimage);
-                ornimage+=`<div class="gallery">`;
-                ornimage+= `<img class="galies" src="${onimage.img}">`;
-                ornimage+=`</div>`;
-                $('#four').html(ornimage);
-            }
-          }
-
-      };
-      xhttp.open("GET", "ornella.json", true);
-      xhttp.send();
-    };
- loadOrnella();
-
-
-// const loadEng=()=>{
-//     var xhttp = new XMLHttpRequest();
-//     xhttp.onreadystatechange = function () {
-//         if (this.readyState == 4 && this.status == 200) {
-//             var response = JSON.parse(xhttp.responseText);
-//             var enga = response.engagement;
-//             console.log("enga",enga);
-//             // return people;
-//             let ornimage = [];
-//             for (let i = 0; i <enga.length; i++) {
-//                 let onimage = enga[i];
-//                 // console.log("people", onimage);
-//                 // ornimage += `<div class="gallery">`;
-//                 // ornimage += `<img class="galies" src="${onimage.img}">`;
-//                 // ornimage += `</div>`;
-//                 $('#engu').html(ornimage);
-//             }
-//         }
-
-//     };
-//     xhttp.open("GET", "ornella.json", true);
-//     xhttp.send();
-// };
-
-
-$(".enground").click(function(){
-    console.log("laila baby");
-    // loadEng();
-});
-
-
-// const loadQuote = () => {
-//     var qoates= new XMLHttpRequest();
-//     qoates.open("GET", "ornella.json");
-//     qoates.onload=function(){
-//         var ourQoate=JSON.parse(qoates.responseText);
-//        console.log(ourQoate);
-//        gallery(qoates);
-//     }
-//    qoates.send();
-// };
-// const gallery=(data)=> {
-//     console.log("hi");
-//     let choose=`<div>
-//      <div class="wedground"><a href="gallery.html"><img src="./img/wedding.png" alt="trianle aman" width="300px"></a></div>
-//      <div class="enground"><a href=""><img  class="eng p-2" src="./img/engagmet.png" alt="trianle aman" width="300px"></a></div>
-//      <div class="gradground"><a href=""><img src="./img/graduation.png" alt="trianle aman" width="300px"></a></div>
-//      <div class="lowerlogo"></div>
-
-//      <h1 id="article">hellow</h1>
-//      <div id="gallery-footer"></div>
-//      </div>`;
-//       $('#tri').append(choose);
-// };
-// gallery();
-
-const loadBranch = () => {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            var response = JSON.parse(xhttp.responseText);
-            var people = response.branches;
-            // console.log(people);
-            // return people;
-            let ornimage = [];
-            for (let brancho= 0; brancho< people.length; brancho++) {
-                let onimage = people[brancho];
-                // console.log("people", onimage);
-                   ornimage += `<div id="infobtn" class="branc col-lg-3 col-md- col-sm-3" data-toggle="modal" data-target="#brancho-${brancho}">`;
-                   ornimage +=`<p class="bra-loc">${onimage.location}</p>`;
-                   ornimage +=`<div class="branc-img"></div>`;
-                   ornimage +=`</div>`;
-                   ornimage += `<div class="modal fade modalStyle" id="brancho-${brancho}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">`;
-                   ornimage += `<div class="modal-dialog" role="document">`;
-                   ornimage += `<div class="modal-content">`;
-                   ornimage += `<div class="modal-header">`;
-                   ornimage += `<h5 class="modal-title" id="${brancho}exampleModalLabel">${onimage.location} Branch</h5>`;
-                   ornimage += `<button type="button" class="close" data-dismiss="modal" aria-label="Close">`;
-                   ornimage += `<span aria-hidden="true">&times;</span>`;
-                   ornimage += `</button>`;
-                   ornimage += `</div>`;
-                   ornimage += `<div class="modal-body">`;
-
-                   ornimage += `<img  src="${onimage.imgs}" width="80px" height="80px">`;
-                   ornimage += `<p class="b-name">${onimage.name}</p>`;
-                   ornimage += `<p class="ebs">Phone Number :- <em>${onimage.tele}</em></p>`;
-                   ornimage += `<p class="ebs">${onimage.do}</p>`;
-                   ornimage += `<p class="ebs">${onimage.location}</p>`;
-                   ornimage += `<div class="bran-img"></div>`;
-                   ornimage += `</div>`;
-                   ornimage += `<div class="modal-footer">`;
-                //    ornimage += `<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>`;
-                   ornimage += `<button type="button" class="btn btn-primary con-btn">Contact</button>`;
-                   ornimage += `</div>`;
-                   ornimage += `</div>`;
-                   ornimage += `</div>`;
-                   ornimage += `</div>`;
-               
-                $('#branching').html(ornimage);
-            }
-        }
-
-    };
-    xhttp.open("GET", "ornella.json", true);
-    xhttp.send();
-};
-loadBranch();
-$("document").ready(function(){
-$(".con-btn").click(function(){
-    console.log("contact info clicked");
-});
-});
-
-module.exports = {
-    loadOrnella,
-// loadQuote,
-// loadEng,
-
-};
-
-
-},{}],4:[function(require,module,exports){
-"use strict";
-let page=require ('./page'),
-    fetching=require('./fetch'),
-    data=require('./data'),
-    ornella=require('./ornella');
-
-    $(document).ready(()=>{
-    // console.log("home page is loading");
-    // page.home();
-    page.footer();
- 
-    });
-   
-    $("#visitor").click(()=>{
-        console.log("galler is visitor");
-    
-    });
-
-    $(".n3").click(() => {
-        console.log("galler is ready");
-
-    });
-
-},{"./data":2,"./fetch":3,"./ornella":5,"./page":6}],5:[function(require,module,exports){
-"use strict";
-
-},{}],6:[function(require,module,exports){
-"use strict";
-let $= require('jquery');
-
-
-
-const nav = document.getElementById('test');
-function homePage() {
-    let navdisplay = $(
-        `<header id="my-header">
-        <div class="main-nav">
-            <div class="navlink n1"><a href="index.html">Home</a></div>
-            <div class="navlink n2"><a href="aman.html">Aman</a></div>
-            <div class="navlink n3"><a href="#">Gallery</a></div>
-            <div class="navlink n4"><a href="contactme.html">Contact us</a></div>
-            <div class="navlink n5"><a href="branch.html">Divisions</a></div>
-        </div> 
-        <div class="central-nav">
-            <a href="index.html"><img src="img/logoflower2.png" class="img-fluid" alt="ornella logo" width="150px"></a>
-            <div class="orn">Ornella Multi-Media</div>
-            <div class="creative">Creative Photographer and Videographer</div>
-        </div> 
-        <div class="right-nav"> 
-            <div class="legend">Habesha Photographer & Videographer</div>
-            <div class="line"></div> 
-            <div class="follow"> follow me on social media </div>
-            <div class="icons">
-            <a href="https://twitter.com/amanzerumesfin"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="https://www.instagram.com/aman_zeru/"><i class="fab fa-instagram fa-2x"></i></a> 
-            <a href="https://www.facebook.com/begieZgreat/"><i class="fab fa-facebook fa-2x"></i></a>
-            </div> 
-        </div> 
-        </header>`)
-         ;
-
-    $("#test").html(navdisplay);
-}
-homePage();
-
-const footer = () => {
-let footerh = `<div class="footer">
-                 <div class="fi">
-                <img src="./img/logoflower2.png" alt="textlogo" width="150px">
-                </div>
-               <div class="footer2">
-                <div class="f">Home</div>
-                <div class="f">Contact Aman</div>
-                <div class="f">Gallery</div>
-                <div class="f">Branches Address</div>
-                </div> 
-                </div>`;
-    $("#footer").html(footerh);
-};
-footer();
-
-const gallery=()=> {
-    console.log("hi");
-    let choose=`<div class="galleries">
-     <div class="wedground"><a href="gallery.html"><img src="./img/wedding.png" alt="trianle aman" width="300px"></a></div>
-     <div class="enground"><a ><img src="./img/engagmet.png" class="eng" alt="trianle aman" width="300px"></a></div>
-     <div class="gradground"><a href="#"><img src="./img/graduation.png" alt="trianle aman" width="300px"></a></div>
-     <div>
-     <img src="./img/africa.png" alt="trianle aman" width="100%" class="lowerlogo">
-     <a href="#!"><img src="./img/logoflower2.png" alt="trianle aman" width="15%" class="lowerflower"></a>
-    </div>     
-     <div class="zerumess d">
-    <p class="marriage">“You know when you have found your prince because you not only have a smile on your face, but in your heart as well.."</p>
-    </div> 
-    <div class="instagram"><p> follow along on instagram @aman_zeru</p></div>
-    </div>`;
-      $('#tri').html(choose);
-};
-
-
-$(".n3").click(function(){
-    console.log("gallery button clicked");
-    $(".main-home").remove();
-// $(".all-pic").remove();
-   return gallery();
-});
-
-
-module.exports={
-    footer,
-    homePage,
-//    gallery
-};
-
-},{"jquery":1}]},{},[4]);
+},{}]},{},[3]);
