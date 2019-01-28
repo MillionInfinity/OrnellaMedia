@@ -1,9 +1,5 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
-
-
-},{}],2:[function(require,module,exports){
-"use strict";
 // let data=require('./data');
 const loadOrnella=()=>{
  var xhttp = new XMLHttpRequest();
@@ -16,7 +12,7 @@ const loadOrnella=()=>{
             let ornimage=[];
             for(let i=0; i<people.length; i++){
                 let onimage=people[i];
-                // console.log("people", onimage);
+                // console.log("people", onimage.img);
                 ornimage+=`<div class="gallery">`;
                 ornimage+= `<img class="galies" src="${onimage.img}">`;
                 ornimage+=`</div>`;
@@ -96,39 +92,38 @@ const loadBranch = () => {
             // console.log(people);
             // return people;
             let ornimage = [];
-            for (let brancho= 0; brancho< people.length; brancho++) {
+            for (let brancho = 0; brancho < people.length; brancho++) {
                 let onimage = people[brancho];
                 // console.log("people", onimage);
-                   ornimage += `<div id="infobtn" class="branc col-lg-3 col-md- col-sm-3" data-toggle="modal" data-target="#brancho-${brancho}">`;
-                   ornimage +=`<p class="bra-loc">${onimage.location}</p>`;
-                   ornimage +=`<div class="branc-img"></div>`;
-                   ornimage +=`</div>`;
-                   ornimage += `<div class="modal fade modalStyle" id="brancho-${brancho}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">`;
-                   ornimage += `<div class="modal-dialog" role="document">`;
-                   ornimage += `<div class="modal-content">`;
-                   ornimage += `<div class="modal-header">`;
-                   ornimage += `<h5 class="modal-title" id="${brancho}exampleModalLabel">${onimage.location} Branch</h5>`;
-                   ornimage += `<button type="button" class="close" data-dismiss="modal" aria-label="Close">`;
-                   ornimage += `<span aria-hidden="true">&times;</span>`;
-                   ornimage += `</button>`;
-                   ornimage += `</div>`;
-                   ornimage += `<div class="modal-body">`;
+                ornimage += `<div id="infobtn" class="branc col-lg-3 col-md- col-sm-3" data-toggle="modal" data-target="#brancho-${brancho}">`;
+                ornimage += `<p class="bra-loc">${onimage.location}</p>`;
+                ornimage += `<div class="branc-img"></div>`;
+                ornimage += `</div>`;
+                ornimage += `<div class="modal fade modalStyle" id="brancho-${brancho}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">`;
+                ornimage += `<div class="modal-dialog" role="document">`;
+                ornimage += `<div class="modal-content">`;
+                ornimage += `<div class="modal-header">`;
+                ornimage += `<h5 class="modal-title" id="${brancho}exampleModalLabel">${onimage.location} Branch</h5>`;
+                ornimage += `<button type="button" class="close" data-dismiss="modal" aria-label="Close">`;
+                ornimage += `<span aria-hidden="true">&times;</span>`;
+                ornimage += `</button>`;
+                ornimage += `</div>`;
+                ornimage += `<div class="modal-body">`;
 
-                   ornimage += `<img  src="${onimage.imgs}" width="80px" height="80px">`;
-                   ornimage += `<p class="b-name">${onimage.name}</p>`;
-                   ornimage += `<p class="ebs">Phone Number :- <em>${onimage.tele}</em></p>`;
-                   ornimage += `<p class="ebs">${onimage.do}</p>`;
-                   ornimage += `<p class="ebs">${onimage.location}</p>`;
-                   ornimage += `<div class="bran-img"></div>`;
-                   ornimage += `</div>`;
-                   ornimage += `<div class="modal-footer">`;
-                //    ornimage += `<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>`;
-                   ornimage += `<button type="button" class="btn btn-primary con-btn">Contact</button>`;
-                   ornimage += `</div>`;
-                   ornimage += `</div>`;
-                   ornimage += `</div>`;
-                   ornimage += `</div>`;
-               
+                ornimage += `<img  src="${onimage.imgs}" width="80px" height="80px">`;
+                ornimage += `<p class="b-name">${onimage.name}</p>`;
+                ornimage += `<div class="ebs phn">Phone Number :- <em><a class="#" href="tel:${onimage.tele}">${onimage.tele}</a></em></div>`;
+                ornimage += `<p class="ebs">${onimage.do}</p>`;
+                ornimage += `<p class="ebs">${onimage.location}</p>`;
+                ornimage += `<div class="bran-img"></div>`;
+                ornimage += `</div>`;
+                ornimage += `<div class="modal-footer">`;
+                ornimage += `<div><a class="efriend" href="mailto: ${onimage.email}">contact ${onimage.name}</a></div>`;
+                ornimage += `</div>`;
+                ornimage += `</div>`;
+                ornimage += `</div>`;
+                ornimage += `</div>`;
+
                 $('#branching').html(ornimage);
             }
         }
@@ -143,6 +138,11 @@ $(".con-btn").click(function(){
     console.log("contact info clicked");
 });
 });
+$(".modal-body div em").text(function () {
+    (this).replaceWith(
+        '<a href="tel:1' + $(this).text().replace(/-/g, '').replace(/ /g, '').replace(/x/g, ',') + '">' +(this).text() + "</a>"
+    );
+});
 
 module.exports = {
     loadOrnella,
@@ -151,12 +151,42 @@ module.exports = {
 
 };
 
+// ornimage += `<div id="infobtn" class="branc col-lg-3 col-md- col-sm-3" data-toggle="modal" data-target="#brancho-${brancho}">`;
+// ornimage += `<p class="bra-loc">${onimage.location}</p>`;
+// ornimage += `<div class="branc-img"></div>`;
+// ornimage += `</div>`;
+// ornimage += `<div class="modal fade modalStyle" id="brancho-${brancho}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">`;
+// ornimage += `<div class="modal-dialog" role="document">`;
+// ornimage += `<div class="modal-content">`;
+// ornimage += `<div class="modal-header">`;
+// ornimage += `<h5 class="modal-title" id="${brancho}exampleModalLabel">${onimage.location} Branch</h5>`;
+// ornimage += `<button type="button" class="close" data-dismiss="modal" aria-label="Close">`;
+// ornimage += `<span aria-hidden="true">&times;</span>`;
+// ornimage += `</button>`;
+// ornimage += `</div>`;
+// ornimage += `<div class="modal-body">`;
 
-},{}],3:[function(require,module,exports){
+// ornimage += `<img  src="${onimage.imgs}" width="80px" height="80px">`;
+// ornimage += `<p class="b-name">${onimage.name}</p>`;
+// ornimage += `<div class="ebs phn">Phone Number :- <em><a href="tel:${onimage.tele}">${onimage.tele}</a></em></div>`;
+// ornimage += `<p class="ebs">${onimage.do}</p>`;
+// ornimage += `<p class="ebs">${onimage.location}</p>`;
+// ornimage += `<div class="bran-img"></div>`;
+// ornimage += `</div>`;
+// ornimage += `<div class="modal-footer">`;
+//    ornimage += `<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>`;
+// ornimage += `<div><a class="efriend" href="mailto: ${onimage.email}">contact ${onimage.name}</a></div>`;
+// ornimage += `</div>`;
+// ornimage += `</div>`;
+// ornimage += `</div>`;
+// ornimage += `</div>`;
+
+// $('#branching').html(ornimage);
+},{}],2:[function(require,module,exports){
 "use strict";
 let page=require ('./page'),
     fetching=require('./fetch'),
-    data=require('./data'),
+    // data=require('./data'),
     ornella=require('./ornella');
 
     $(document).ready(()=>{
@@ -176,10 +206,10 @@ let page=require ('./page'),
 
     });
 
-},{"./data":1,"./fetch":2,"./ornella":4,"./page":5}],4:[function(require,module,exports){
+},{"./fetch":1,"./ornella":3,"./page":4}],3:[function(require,module,exports){
 "use strict";
 
-},{}],5:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 "use strict";
 let $= require('jquery');
 
@@ -193,7 +223,7 @@ function homePage() {
             <div class="navlink n1"><a href="index.html">Home</a></div>
             <div class="navlink n2"><a href="aman.html">Aman</a></div>
             <div class="navlink n3"><a href="#">Gallery</a></div>
-            <div class = "navlink n4" > <a href="http://localhost/ornella/OrnellaMedia/contact.php">Contact us</a> </div>
+            <div class = "navlink n4"><a href="http://localhost/ornella/OrnellaMedia/contact.php">Contact us</a> </div>
             <div class="navlink n5"><a href="branch.html">Divisions</a></div>
         </div> 
         <div class="central-nav">
@@ -204,15 +234,14 @@ function homePage() {
         <div class="right-nav"> 
             <div class="legend">Habesha Photographer & Videographer</div>
             <div class="line"></div> 
-            <div class="follow"> follow me on social media </div>
-            <div class="icons">
+            <div class="follow"> follow me on social media</div>
+            <div class="icon">
             <a href="https://twitter.com/amanzerumesfin"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="https://www.instagram.com/aman_zeru/"><i class="fab fa-instagram fa-2x"></i></a> 
+            <a href="https://www.instagram.com/aman_zeru/?hl=en"><i class="fab fa-instagram fa-2x"></i></a> 
             <a href="https://www.facebook.com/begieZgreat/"><i class="fab fa-facebook fa-2x"></i></a>
             </div> 
         </div> 
-        </header>`)
-         ;
+        </header>`);
 
     $("#test").html(navdisplay);
 }
@@ -261,13 +290,14 @@ $(".n3").click(function(){
 });
 
 
+
 module.exports={
     footer,
     homePage,
 //    gallery
 };
 
-},{"jquery":6}],6:[function(require,module,exports){
+},{"jquery":5}],5:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.3.1
  * https://jquery.com/
@@ -10633,4 +10663,4 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}]},{},[3]);
+},{}]},{},[2]);

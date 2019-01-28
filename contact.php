@@ -34,11 +34,11 @@
                             <br>
                             <span class="error"><?= $email_error ?></span>
                             <br>
-                            <input placeholder="Your Phone Number" class="form-control fc" type="text" name="phone" value="<?= $phone?> "tabindex="3">
+                            <input placeholder="Your Phone Number" class="form-control fc" type="text" name="phone" value="<?= $phone?>" tabindex="2">
                             <br>
                             <span class="error"><?= $phone_error ?></span>
                             <br>
-                            <textarea placeholder="Type your Message Here...." class="form-control fc" tabindex="5" type="text" name="message" value="<?= $message?>"></textarea>
+                            <textarea placeholder="Type your Message Here...." class="form-control fc"  name="message" value="<?= $message?>" tabindex="5" ></textarea>
                             <span class="error"></span>
                             <br>
                             <input class="form-control submit" id="submit" name="submit" type="submit" id="contact-submit"

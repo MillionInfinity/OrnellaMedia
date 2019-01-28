@@ -22,7 +22,7 @@ span.close {
 }
 .wed-text{
     margin-left:35%;
-.wed-title{
+h2.wed-title{
     font-family: $amanfont;
     margin-top:3rem;
     
@@ -32,6 +32,7 @@ span.close {
 }
 }
 .wed-main-title{
+    padding-left:1em !important;
     font-weight:100;
     margin:2rem;
     font-family: $curfont;

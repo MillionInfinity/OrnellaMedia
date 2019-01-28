@@ -11,7 +11,7 @@ function homePage() {
             <div class="navlink n1"><a href="index.html">Home</a></div>
             <div class="navlink n2"><a href="aman.html">Aman</a></div>
             <div class="navlink n3"><a href="#">Gallery</a></div>
-            <div class = "navlink n4" > <a href="http://localhost/ornella/OrnellaMedia/contact.php">Contact us</a> </div>
+            <div class = "navlink n4"><a href="http://localhost/ornella/OrnellaMedia/contact.php">Contact us</a> </div>
             <div class="navlink n5"><a href="branch.html">Divisions</a></div>
         </div> 
         <div class="central-nav">
@@ -22,15 +22,14 @@ function homePage() {
         <div class="right-nav"> 
             <div class="legend">Habesha Photographer & Videographer</div>
             <div class="line"></div> 
-            <div class="follow"> follow me on social media </div>
-            <div class="icons">
+            <div class="follow"> follow me on social media</div>
+            <div class="icon">
             <a href="https://twitter.com/amanzerumesfin"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="https://www.instagram.com/aman_zeru/"><i class="fab fa-instagram fa-2x"></i></a> 
+            <a href="https://www.instagram.com/aman_zeru/?hl=en"><i class="fab fa-instagram fa-2x"></i></a> 
             <a href="https://www.facebook.com/begieZgreat/"><i class="fab fa-facebook fa-2x"></i></a>
             </div> 
         </div> 
-        </header>`)
-         ;
+        </header>`);
 
     $("#test").html(navdisplay);
 }
@@ -77,6 +76,7 @@ $(".n3").click(function(){
 // $(".all-pic").remove();
    return gallery();
 });
+
 
 
 module.exports={

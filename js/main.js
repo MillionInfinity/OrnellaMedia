@@ -1,7 +1,7 @@
 "use strict";
 let page=require ('./page'),
     fetching=require('./fetch'),
-    data=require('./data'),
+    // data=require('./data'),
     ornella=require('./ornella');
 
     $(document).ready(()=>{
