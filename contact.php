@@ -1,4 +1,4 @@
-<?php include ("index.php");?>
+ <?php include ("index.php");?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,13 +14,13 @@
     <link rel="shortcut icon" type="image/png" href="img/logoflower1.png">
 </head>
 
-<body id="cont-body">
-    <section id="test">
+<body> 
+    <div id="godaddy"></div>
 
-    </section>
+    </div>
     <section id="tri" class="tri-cont">
         <div class="main-home">
-            <div id="bg-contact" class="bg-aman">
+            <div >
                 <a class="welcome"><img id="visitor" src="./img/dropline.png" alt="trianle aman" width="300px"></a>
                 <div class="amanzeru text-center">
                     <p class="amanmesscon"> Share us your dream...</p>
@@ -34,11 +34,11 @@
                             <br>
                             <span class="error"><?= $email_error ?></span>
                             <br>
-                            <input placeholder="Your Phone Number" class="form-control fc" type="text" name="phone" value="<?= $phone?> "tabindex="3">
+                            <input placeholder="Your Phone Number" class="form-control fc" type="text" name="phone" value="<?= $phone?>" tabindex="2">
                             <br>
                             <span class="error"><?= $phone_error ?></span>
                             <br>
-                            <textarea placeholder="Type your Message Here...." class="form-control fc" tabindex="5" type="text" name="message" value="<?= $message?>"></textarea>
+                            <textarea placeholder="Type your Message Here...." class="form-control fc"  name="message" value="<?= $message?>" tabindex="5" ></textarea>
                             <span class="error"></span>
                             <br>
                             <input class="form-control submit" id="submit" name="submit" type="submit" id="contact-submit"
@@ -54,7 +54,7 @@
                 <img src="./img/africa.png" alt="trianle aman" width="100%" class="lowerlogo">
                 <a href="#!"><img src="./img/logoflower2.png" alt="trianle aman" width="15%" class="lowerflower"></a>
             </div>
-            <!-- <div class="threeIn1">-->
+          
             <div class="zerumess d">
                 <p class="marriage">“You know when you have found your prince because you not only have a smile on your
                     face, but in your heart as well.."</p>
@@ -63,7 +63,7 @@
                 <p> follow along on instagram @aman_zeru</p>
             </div>
         </div>
-    </section>
+    </section> 
     <section id="footer" class="homeFooter"></section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -75,4 +75,4 @@
     <script src="dist/app.js"></script>
 </body>
 
-</html>
+</html>  

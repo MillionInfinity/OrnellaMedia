@@ -3,79 +3,79 @@
 {
 "ornellas":[
     {   "name":"wedding",
-        "img":"./../img/1.jpg"
+        "img":"./../img/4.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/2.jpg"
+        "img": "img/2.jpg"
     },
      {
         "name": "Engagement",
-        "img": "./../img/3.jpg"
+        "img": "img/3.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/4.jpg"
+        "img": "img/4.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/5.jpg"
+        "img": "img/5.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/6.jpg"
+        "img": "img/6.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/7.jpg"
+        "img": "img/7.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/8.jpg"
+        "img": "img/8.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/9.jpg"
+        "img": "img/9.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/10.jpg"
+        "img": "img/10.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/11.jpg"
+        "img": "img/11.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/12.jpg"
+        "img": "img/12.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/13.jpg"
+        "img": "img/13.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/14.jpg"
+        "img": "img/14.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/15.jpg"
+        "img": "img/15.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/16.jpg"
+        "img": "img/16.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/17.jpg"
+        "img": "img/17.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/18.jpg"
+        "img": "img/18.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/19.jpg"
+        "img": "img/19.jpg"
     }
 ],
 "article":[
@@ -108,63 +108,63 @@
   
     {
         "name": "Engagement",
-        "img": "./../img/2.jpg"
+        "img": "img/2.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/3.jpg"
+        "img": "img/3.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/4.jpg"
+        "img": "img/4.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/5.jpg"
+        "img": "img/5.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/6.jpg"
+        "img": "img/6.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/7.jpg"
+        "img": "img/7.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/8.jpg"
+        "img": "img/8.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/9.jpg"
+        "img": "img/9.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/10.jpg"
+        "img": "img/10.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/11.jpg"
+        "img": "img/11.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/12.jpg"
+        "img": "img/12.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/13.jpg"
+        "img": "img/13.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/14.jpg"
+        "img": "img/14.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/15.jpg"
+        "img": "img/15.jpg"
     },
     {
         "name": "Engagement",
-        "img": "./../img/16.jpg"
+        "img": "img/16.jpg"
     }
 ],
 "branches": [
@@ -173,34 +173,39 @@
         "name": "Secondhand Serenade",
         "tele":"+2119356472",
         "do":"camera man, Editor,and wedding planner",
-        "imgs": "./../img/2002.png"
+        "imgs": "./../img/14.jpg",
+        "email":"milly@gmail.com"
     },
     {
         "location": "Asmara, Eritrea",
         "name": "Secondhand Serenade",
         "tele": "+2119356472",
         "do": "camera man, Editor,and wedding planner",
-        "imgs": "./../img/2002.png"
+        "imgs": "./../img/14.jpg",
+        "email": "amany@gmail.com"
     },
     {
         "location": "Kampala, Uganda",
         "name": "Secondhand Serenade",
         "tele": "+2119356472",
         "do": "camera man, Editor,and wedding planner",
-        "imgs": "./../img/2002.png"
+        "imgs": "./../img/14.jpg",
+        "email": "dannyy@gmail.com"
     },
     {
         "location": "Addis A., Ethiopia",
         "name": "Secondhand Serenade",
         "tele": "+2119356472",
         "do": "camera man, Editor,and wedding planner",
-        "imgs": "./../img/2002.png"
+        "imgs": "./../img/14.jpg",
+        "email": "issaky@gmail.com"
     }, {
         "location": "Kartoom, Sudan",
         "name": "Secondhand Serenade",
         "tele": "+2119356472",
         "do": "camera man, Editor,and wedding planner",
-        "imgs":"./../img/2002.png"
+        "imgs": "img/14.jpg",
+        "email": "meazen@gmail.com"
     }
 ]
 }

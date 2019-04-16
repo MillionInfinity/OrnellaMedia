@@ -1,0 +1,137 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ORNELLA Multimedia</title>
+    <link href="https://fonts.googleapis.com/css?family=Kristi" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/png" href="img/logoflower1.png">
+</head>
+
+<body id="bran-body">
+  <header id="my-header" class="orni-divi">
+    <div class="main-nav">
+        <div class="navlink n1"><a href="index.html">Home</a></div>
+        <div class="navlink n2"><a href="aman.html">Aman</a></div>
+        <div class="navlink n3"><a href="#">Gallery</a></div>
+        <div class="navlink n4"><a href="http://localhost/ornella/OrnellaMedia/contact.php">Contact us</a> </div>
+        <div class="navlink n5"><a href="branch.html">Divisions</a></div>
+    </div>
+    <div class="central-nav">
+        <a href="index.html"><img src="img/logoflower2.png" class="img-fluid" alt="ornella logo" width="150px"></a>
+        <div class="orn">Ornella Multi-Media</div>
+        <div class="creative">Creative Photographer and Videographer</div>
+    </div>
+    <div class="right-nav">
+        <div class="legend">Habesha Photographer & Videographer</div>
+        <div class="line"></div>
+        <div class="follow"> follow me on social media</div>
+        <div class="icon">
+           <a href="https://twitter.com/amanzerumesfin"><img src="./img/50278.png" alt="twitter" height="25px" width="23px"></a>
+            <a href="https://www.instagram.com/aman_zeru/?hl=en"><img src="./img/instagram.png" alt="twitter" height="40px" width="60px"></a>
+            <a href="https://www.facebook.com/begieZgreat/"><img src="./img/facebook.png" alt="twitter" height="20px" width="25px"></a>
+        </div>
+    </div>
+</header>
+
+
+    <section id="tri">
+        <div class="main-branch">
+            <div id="bg-contact" class="bg-aman">
+            <a class="welcome"><img id="visitor" src="./img/branches.png" alt="trianle aman" width="300px"></a>
+            <div class="wed-text">
+                <h2 class="wed-title branch-title">CHOOSE <span>Alove</span> documentary <span>REEL</span></h2>
+                <p class="wed-main-title text-center big-branch">Wedding</p>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-1" background="red" height="50px"></div>
+                    <div class="col-10 alem">
+                        <div class="row" id="branching"></div>
+                    </div>
+                    <div class="col-1"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                <img src="./img/africa.png" alt="trianle aman" width="100%" class="lowerlogo">
+                <a href="#!"><img src="./img/logoflower2.png" alt="trianle aman" width="15%" class="lowerflower"></a>
+            </div>
+             <div class="zerumess d">
+                <p class="marriage">“You know when you have found your prince because you not only have a smile on your
+                    face, but in your heart as well.."</p>
+            </div>
+            <div class="instagram">
+                <p> follow along on instagram @aman_zeru</p>
+            </div>
+        </div>
+    </section>
+    <section id="footer" class="homeFooter"></section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="dist/app.js"></script>
+</body>
+
+</html>
+
+
+ <body id="cont-body">
+    <div id="test">
+
+    </div>
+    <section id="tri" class="tri-cont">
+        <div class="main-home">
+            <div id="bg-contact" class="bg-aman">
+                <a class="welcome"><img id="visitor" src="./img/branches.png" alt="trianle aman" width="300px"></a>
+                <div class="amanzeru text-center">
+                    <div class="wed-text">
+                        <a class="welcome"><img id="visitor" src="./img/branches.png" alt="trianle aman" width="300px"></a> -->
+<!--<h2 class="wed-title">CHOOSE <span>Alove</span> documentary <span>REEL</span></h2>
+                        <p class="wed-main-title ">Wedding</p>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-1" background="red" height="50px"></div>
+                            <div class="col-10 alem">
+                                <div class="row" id="branching"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img src="./img/africa.png" alt="trianle aman" width="100%" class="lowerlogo">
+                <a href="#!"><img src="./img/logoflower2.png" alt="trianle aman" width="15%" class="lowerflower"></a>
+            </div> -->
+
+<!-- <div class="zerumess d">
+                <p class="marriage">“You know when you have found your prince because you not only have a smile on your
+                    face, but in your heart as well.."</p>
+            </div>
+            <div class="instagram">
+                <p> follow along on instagram @aman_zeru</p>
+            </div>
+        </div>
+    </section>
+    <section id="footer" class="homeFooter"></section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="dist/app.js"></script>
+</body> -->
+

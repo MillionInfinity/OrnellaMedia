@@ -1,5 +1,12 @@
 @import "variables";
-// #large-imgs{
+#cont-body {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+ background-color: #ccb583;
+ opacity: 0.5;
+ height: 100%;
+
 #bg-contact {
   background: url('../img/77.jpg');
   background-repeat: no-repeat;
@@ -15,61 +22,73 @@
   }
 
 }
-#cont-body {
-  margin:0;
-  padding: 0;
-  background-size:cover;
+.tri-cont {
+  color: white;
 
 }
-.tri-cont{
-  color: white;
 }
-.contact-title{
-  margin-top:100px;
-  color:white;
-  text-transform: uppercase;
-  transition:all 4s ease-in-out;
-  -webkit-transition:all 4s ease-in-out;
-  -moz-transition:all 4s ease-in-out;
-  -ms-transition:all 4s ease-in-out;
-  -o-transition:all 4s ease-in-out;
-  h1{
-    font-size:32px;
-    line-height: 10px;
-      }
-  h2{
-    font-size:16px;
-  }
-}
-#contact-form{
-  margin-top: 50px;
-  transition: all 4s ease-in-out;
-  -webkit-transition: all 4s ease-in-out;
-  -moz-transition: all 4s ease-in-out;
-  -ms-transition: all 4s ease-in-out;
-  -o-transition: all 4s ease-in-out;
-  .form-control{
-    width: 600px;
-    background:white;
-    border:none;
-    outline: none;
-    border: 1px solid white;
-    color:$primary;
-    font-size:18px;
-    margin-bottom: 16px;
-     opacity: 0.4;
-     filter: alpha(opacity=30);
-  }
-input {
-  height: 45px;
-  color: white;
-}
-}
+// body finished here
+
+
+// #contact-form{
+//   margin-top: 50px;
+//   transition: all 4s ease-in-out;
+//   -webkit-transition: all 4s ease-in-out;
+//   -moz-transition: all 4s ease-in-out;
+//   -ms-transition: all 4s ease-in-out;
+//   -o-transition: all 4s ease-in-out;
+ 
+
+//   .form-control{
+//     width: 600px;
+//     // background:white;
+//     border:none;
+//     outline: none;
+//     border: 1px solid $silverGold;
+//     color:$primary;
+//     font-size:18px;
+//     margin-bottom: 16px;
+//      }
+//    .fc {
+//      opacity: 0.4;
+//      filter: alpha(opacity=30);
+//    }
+   
+// input {
+//   height: 45px;
+//   color: white;
+// }
+// }
+
 
 #contact-form{
   position: relative;
   margin-left:30%;
- 
+    margin-top: 50px;
+      transition: all 4s ease-in-out;
+      -webkit-transition: all 4s ease-in-out;
+      -moz-transition: all 4s ease-in-out;
+      -ms-transition: all 4s ease-in-out;
+      -o-transition: all 4s ease-in-out;
+   .form-control{
+     width: 600px;
+     // background:white;
+     border:none;
+     outline: none;
+     border: 1px solid white;
+     color:$primary;
+     font-size:18px;
+     margin-bottom: 16px;
+      }
+    .fc {
+      opacity: 0.4;
+      filter: alpha(opacity=30);
+    }
+
+ input {
+   height: 45px;
+   color: white;
+ }
   #submit {
     background-color: $maincolor;
     border-color: transparent;
@@ -90,14 +109,14 @@ input {
        position: absolute;
        top: 6rem;
        left: 40rem;
-       background-color: azure;
+      //  background-color: azure;
        min-height: 30rem;
        width: 45em;
      }
 }
   .amanmesscon {
     font-family: $amanfont;
-    margin-left: 30%;
+    margin-left: 35%;
     margin-top: 10%;
     font-size: 2rem;
     line-height: 0.1;
