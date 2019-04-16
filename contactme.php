@@ -44,15 +44,15 @@
              <div class="contact-form"> 
               
               <form id="contact-form" action="#" method="post">
-                <input placeholder="Your name" type="text" tabindex="1" name="name" class="form-control" autofocus>
+                <input placeholder="Your name" type="text" tabindex="1" name="name" class="form-control" autofocus/>
                 <br> 
                 <span class="error"></span>
                 <br>
-                <input placeholder="Your Email Address" type="email" name="email"  class="form-control" tabindex="2">
+                <input placeholder="Your Email Address" type="email" name="email"  class="form-control" tabindex="2"/>
                 <br/>
                 <span class="error"></span>
                 <br>
-                <input placeholder="Your Phone Number" class="form-control" type="text" name="phone" tabindex="3" >
+                <input placeholder="Your Phone Number" class="form-control" type="text" name="phone" tabindex="3" />
                 <br>
                 <span class="error"></span>
                 <br>
@@ -60,7 +60,7 @@
                 <textarea placeholder="Type your Message Here...."  class="form-control" tabindex="5" type="text" name="message"></textarea>
                 <span class="error"></span>
                 <br>
-                <input class="form-control submit" id="submit" name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="SEND MESSAGE">
+                <input class="form-control submit" id="submit" name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="SEND MESSAGE"/>>
                 <div class="success"></div>
                 </form>
            </div>
