@@ -3,7 +3,9 @@
   margin: 0;
   padding: 0;
   background-size: cover;
-
+ background-color: #ccb583;
+ opacity: 0.5;
+ height: 100%;
 
 #bg-contact {
   background: url('../img/77.jpg');
@@ -28,39 +30,65 @@
 // body finished here
 
 
-#contact-form{
-  margin-top: 50px;
-  transition: all 4s ease-in-out;
-  -webkit-transition: all 4s ease-in-out;
-  -moz-transition: all 4s ease-in-out;
-  -ms-transition: all 4s ease-in-out;
-  -o-transition: all 4s ease-in-out;
-  
-  .form-control{
-    width: 600px;
-    // background:white;
-    border:none;
-    outline: none;
-    border: 1px solid white;
-    color:$primary;
-    font-size:18px;
-    margin-bottom: 16px;
-     }
-   .fc {
-     opacity: 0.4;
-     filter: alpha(opacity=30);
-   }
+// #contact-form{
+//   margin-top: 50px;
+//   transition: all 4s ease-in-out;
+//   -webkit-transition: all 4s ease-in-out;
+//   -moz-transition: all 4s ease-in-out;
+//   -ms-transition: all 4s ease-in-out;
+//   -o-transition: all 4s ease-in-out;
+ 
+
+//   .form-control{
+//     width: 600px;
+//     // background:white;
+//     border:none;
+//     outline: none;
+//     border: 1px solid $silverGold;
+//     color:$primary;
+//     font-size:18px;
+//     margin-bottom: 16px;
+//      }
+//    .fc {
+//      opacity: 0.4;
+//      filter: alpha(opacity=30);
+//    }
    
-input {
-  height: 45px;
-  color: white;
-}
-}
+// input {
+//   height: 45px;
+//   color: white;
+// }
+// }
+
 
 #contact-form{
   position: relative;
   margin-left:30%;
- 
+    margin-top: 50px;
+      transition: all 4s ease-in-out;
+      -webkit-transition: all 4s ease-in-out;
+      -moz-transition: all 4s ease-in-out;
+      -ms-transition: all 4s ease-in-out;
+      -o-transition: all 4s ease-in-out;
+   .form-control{
+     width: 600px;
+     // background:white;
+     border:none;
+     outline: none;
+     border: 1px solid white;
+     color:$primary;
+     font-size:18px;
+     margin-bottom: 16px;
+      }
+    .fc {
+      opacity: 0.4;
+      filter: alpha(opacity=30);
+    }
+
+ input {
+   height: 45px;
+   color: white;
+ }
   #submit {
     background-color: $maincolor;
     border-color: transparent;

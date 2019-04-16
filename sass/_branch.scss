@@ -9,45 +9,47 @@
 
 
     #bg-contact {
-        background: url('./../img/77.jpg');
-        background-repeat: no-repeat;
-        background-attachment: relative;
-        background-size: cover;
-        height: 110vh;
-                @include easeOut();
+     background:url('../img/77.jpg');
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+     height: 110vh;
+     @include easeOut();
+
 
         .welcome:hover {
             box-shadow: rgba(0, 0, 0, 0.5);
             filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
             -webkit-filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
         }
-     .bran-text {
-         margin-left: 35%;
-         color: white;
-         .bran-title {
-             font-family: $amanfont;
-             margin-top: 3rem;
+    }
+    //  .bran-text {
+    //      margin-left: 35%;
+    //      color: white;
+    //      .bran-title {
+    //          font-family: $amanfont;
+    //          margin-top: 3rem;
 
-             span {
-                 font-family: $curfont;
-             }
-         }
-     }
+    //          span {
+    //              font-family: $curfont;
+    //          }
+    //      }
+     
      .row{
          margin-top:3rem;
          margin-left:5%;
      }
-     .branch-title{
-        margin-top:-55rem;
-        margin-left:5rem;
-        color:white;
-     }
-    .big-branch{
-        margin-left:-35rem;
-        color:white;
-    }
+    //  .branch-title{
+    //     margin-top:-55rem;
+    //     margin-left:5rem;
+    //     color:white;
+    //  }
+    // .big-branch{
+    //     margin-left:-35rem;
+    //     color:white;
+    // }
 
-    }
+    // }
 
     // .tri-cont {
     //     color: white;
@@ -93,11 +95,20 @@
 
 .modal-body {
     display: grid;
+    color:white;
 
     img {
-        border-radius: 50%;
+        border-radius: 10px 25px 15px;
         height: 150x;
         margin-left: 35%;
+        border:2px solid white;
+        -webkit-border-radius: 10px 25px 15px;
+        -moz-border-radius: 10px 25px 15px;
+        -ms-border-radius: 10px 25px 15px;
+        -o-border-radius: 10px 25px 15px;
+}
+    img:hover{
+        border:2px solid $primary;
     }
 
     .b-name {
@@ -123,6 +134,10 @@
     z-index: 1500;
    
 }
+.modal-title{
+    color:white;
+
+}
 .orni-divi{
     .follow,
     .creative{
@@ -133,4 +148,32 @@
          font-family:"Times New Roman";
          font-size:2.5rem;
     }
+}
+.efriend{
+    text-decoration-line: none;
+    -moz-text-decoration-line: none;
+    background: $primary;
+    color:white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+}
+    .efriend:hover {
+        text-decoration-line: none;
+        -moz-text-decoration-line: none;
+        color:$primary;
+        background:white;
+    }
+    a.telll{
+       text-decoration-line: none;
+       -moz-text-decoration-line: none;
+       color:white;
+}
+a.telll:hover{
+    color:$primary;
+   
 }

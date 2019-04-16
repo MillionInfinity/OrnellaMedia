@@ -10,13 +10,39 @@ let page=require ('./page'),
     page.footer();
  
     });
-   
+
+
+ 
     $("#visitor").click(()=>{
         console.log("galler is visitor");
     
     });
 
-    $(".n3").click(() => {
-        console.log("galler is ready");
+    var buttonClicked;
+    $(".wedd").click(()=>{
+      if(buttonClicked!= true){
+        buttonClicked=true;
+        $('.are').hide();
+        $('.selga').hide();
+        $(".wed-text").css({ display:"inline" });
+        // alert('button clicked');
+    }else{
+
+    }
+    console.log("i dont know");
 
     });
+var buttonClicke;
+$(".eng").click(() => {
+    if (buttonClicke!= true) {
+        buttonClicke = true;
+        $('.we').hide();
+        $('.selga').hide();
+        $(".wed-text").css({ display: "inline" });
+        // alert('button clicked');
+    } else {
+
+    }
+    console.log("i dont know");
+
+});

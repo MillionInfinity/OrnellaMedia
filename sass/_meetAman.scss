@@ -8,45 +8,63 @@
     background-size: cover;
     height: 110vh;
     @include easeOut();
-
-    .welcome:hover {
-        box-shadow: rgba(0, 0, 0, 0.5);
-        filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
-        -webkit-filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
-    }
-
 }
-.welaman img {
-    width: 23rem;
-    margin: 1px;
-    z-index: 150;
-  
-}
+
 
 .amanzeru{
-    position: relative;
+    position: absolute;
     top:-925px;
-    //   background: rgba(lighten($silverGold, 2), 0.4);
-    //  padding:0.1rem 0rem 1rem 0rem;
-    //  color;
-    .amanmess {
-        font-family: $amanfont;
-        margin-left: 45%;
-        // margin-top: 10%;
-        font-size: 2rem;
-        line-height: 0.1;
-        font-stretch: ultra-expanded;
-        text-transform: uppercase;
-    }
-}
+    z-index: 1020;
+      background: rgba(lighten($silverGold, 2), 0.4);
+  }
+     h4{
+       font-family: $amanfont;
+       margin-left:12%;
+       font-size: 1.1rem;
+       font-stretch: ultra-expanded;
+     }
+     h5 {
+         font-size: 1rem;
+         font-kerning: normal;
+         font-weight: 100;
+         color: $maincolor;
+     }
 
-.zerumess{
-     font-family: $amanfont;
-     margin-left:12%;
-     font-size: 1.1rem;
-     font-stretch: ultra-expanded;
-}
-// #zerumess1 {
-//     position: absolute;
-//     left: 30%;
-// }
+
+    .anan{
+        font-family: $amanfont;
+        font-size: 3rem;
+        font-weight: 900;
+        font-stretch: ultra-expanded;
+    }
+ .hor-line {
+     background-color:$primary;
+     height: 0.2rem;
+     width: 17.8rem;
+     margin-top:-0.7rem;
+ }
+   h3 {
+       margin-top:0.4rem;
+       font-family: $cursivefont;
+       font-size: 18.5px;
+     }
+   .myNm{
+     font-size: 1.5rem;
+     height: 0.2rem;
+     width: 26.5rem;
+    padding-bottom:1.2rem;
+    
+     z-index: 9;
+   }
+   .colect{
+ position: absolute;
+ left:18rem;
+ top:55rem;
+ padding:2rem;
+   }
+   .about{
+    font-family: $amanfont;
+    span{
+       font-family: $cursivefont;
+    }
+   }

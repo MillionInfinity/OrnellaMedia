@@ -1,6 +1,16 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 // let data=require('./data');
+// var counter = 0;
+function changeImage() {
+    var image = document.getElementById('heartc');
+    if (image.src.match("heart")) {
+        image.src = "./../img/heartb.png";
+    } else {
+        image.src = "./../img/heartr.png";
+    }
+}
+
 const loadOrnella=()=>{
  var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
@@ -12,11 +22,13 @@ const loadOrnella=()=>{
             let ornimage=[];
             for(let i=0; i<people.length; i++){
                 let onimage=people[i];
-                // console.log("people", onimage.img);
+                console.log("people", onimage.img);
                 ornimage+=`<div class="gallery">`;
                 ornimage+= `<img class="galies" src="${onimage.img}">`;
+                // ornimage += `<a class="heart"><img id="heartc" onclick="changeImage()" src="./../img/heartb.png" alt="heart" width="20px" height="20px"></a>`;
+                // ornimage +=``;
                 ornimage+=`</div>`;
-                $('#four').html(ornimage);
+                $('.five-aman').html(ornimage);
             }
           }
 
@@ -24,65 +36,42 @@ const loadOrnella=()=>{
       xhttp.open("GET", "ornella.json", true);
       xhttp.send();
     };
- loadOrnella();
 
-
-// const loadEng=()=>{
-//     var xhttp = new XMLHttpRequest();
-//     xhttp.onreadystatechange = function () {
-//         if (this.readyState == 4 && this.status == 200) {
-//             var response = JSON.parse(xhttp.responseText);
-//             var enga = response.engagement;
-//             console.log("enga",enga);
-//             // return people;
-//             let ornimage = [];
-//             for (let i = 0; i <enga.length; i++) {
-//                 let onimage = enga[i];
-//                 // console.log("people", onimage);
-//                 // ornimage += `<div class="gallery">`;
-//                 // ornimage += `<img class="galies" src="${onimage.img}">`;
-//                 // ornimage += `</div>`;
-//                 $('#engu').html(ornimage);
-//             }
-//         }
-
-//     };
-//     xhttp.open("GET", "ornella.json", true);
-//     xhttp.send();
-// };
-
-
-$(".enground").click(function(){
-    console.log("laila baby");
-    // loadEng();
+$(".wedd").click(function() {
+    console.log('somte');
+    return loadOrnella();
 });
 
+const loadOrnellas=()=>{
+    // console.log("engagent clicked");
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(xhttp.responseText);
+            var peoples = response.engagement;
+            // console.log(peoples);
+            // return people;
+            let ornimages = [];
+            for (let i = 0; i < peoples.length; i++) {
+                let onimages = peoples[i];
+                // console.log("people", onimages.img);
+                ornimages += `<div class="gallery">`;
+                 ornimages += `<img class="galies" src="${onimages.img}">`;
+                // // ornimage += `<a class="heart"><img id="heartc" onclick="changeImage()" src="./../img/heartb.png" alt="heart" width="20px" height="20px"></a>`;
+                // ornimages += ``;
+                ornimages += `</div>`;
+                $('.five-aman').html(ornimages);
+            }
+        }
 
-// const loadQuote = () => {
-//     var qoates= new XMLHttpRequest();
-//     qoates.open("GET", "ornella.json");
-//     qoates.onload=function(){
-//         var ourQoate=JSON.parse(qoates.responseText);
-//        console.log(ourQoate);
-//        gallery(qoates);
-//     }
-//    qoates.send();
-// };
-// const gallery=(data)=> {
-//     console.log("hi");
-//     let choose=`<div>
-//      <div class="wedground"><a href="gallery.html"><img src="./img/wedding.png" alt="trianle aman" width="300px"></a></div>
-//      <div class="enground"><a href=""><img  class="eng p-2" src="./img/engagmet.png" alt="trianle aman" width="300px"></a></div>
-//      <div class="gradground"><a href=""><img src="./img/graduation.png" alt="trianle aman" width="300px"></a></div>
-//      <div class="lowerlogo"></div>
-
-//      <h1 id="article">hellow</h1>
-//      <div id="gallery-footer"></div>
-//      </div>`;
-//       $('#tri').append(choose);
-// };
-// gallery();
-
+    };
+    xhttp.open("GET", "ornella.json", true);
+    xhttp.send();
+};
+$(".eng").click(function () {
+    console.log('somte');
+    return loadOrnellas();
+});
 const loadBranch = () => {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -110,15 +99,15 @@ const loadBranch = () => {
                 ornimage += `</div>`;
                 ornimage += `<div class="modal-body">`;
 
-                ornimage += `<img  src="${onimage.imgs}" width="80px" height="80px">`;
+                ornimage += `<img src="${onimage.imgs}" width="80px" height="80px">`;
                 ornimage += `<p class="b-name">${onimage.name}</p>`;
-                ornimage += `<div class="ebs phn">Phone Number :- <em><a class="#" href="tel:${onimage.tele}">${onimage.tele}</a></em></div>`;
+                ornimage += `<div class="ebs phn">Phone Number :- <em><a class="telll" href="tel:${onimage.tele}">${onimage.tele}</a></em></div>`;
                 ornimage += `<p class="ebs">${onimage.do}</p>`;
                 ornimage += `<p class="ebs">${onimage.location}</p>`;
                 ornimage += `<div class="bran-img"></div>`;
                 ornimage += `</div>`;
                 ornimage += `<div class="modal-footer">`;
-                ornimage += `<div><a class="efriend" href="mailto: ${onimage.email}">contact ${onimage.name}</a></div>`;
+                ornimage += `<div><p><a class="efriend" href="mailto: ${onimage.email}">contact ${onimage.name}</a></p></div>`;
                 ornimage += `</div>`;
                 ornimage += `</div>`;
                 ornimage += `</div>`;
@@ -151,37 +140,6 @@ module.exports = {
 
 };
 
-// ornimage += `<div id="infobtn" class="branc col-lg-3 col-md- col-sm-3" data-toggle="modal" data-target="#brancho-${brancho}">`;
-// ornimage += `<p class="bra-loc">${onimage.location}</p>`;
-// ornimage += `<div class="branc-img"></div>`;
-// ornimage += `</div>`;
-// ornimage += `<div class="modal fade modalStyle" id="brancho-${brancho}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">`;
-// ornimage += `<div class="modal-dialog" role="document">`;
-// ornimage += `<div class="modal-content">`;
-// ornimage += `<div class="modal-header">`;
-// ornimage += `<h5 class="modal-title" id="${brancho}exampleModalLabel">${onimage.location} Branch</h5>`;
-// ornimage += `<button type="button" class="close" data-dismiss="modal" aria-label="Close">`;
-// ornimage += `<span aria-hidden="true">&times;</span>`;
-// ornimage += `</button>`;
-// ornimage += `</div>`;
-// ornimage += `<div class="modal-body">`;
-
-// ornimage += `<img  src="${onimage.imgs}" width="80px" height="80px">`;
-// ornimage += `<p class="b-name">${onimage.name}</p>`;
-// ornimage += `<div class="ebs phn">Phone Number :- <em><a href="tel:${onimage.tele}">${onimage.tele}</a></em></div>`;
-// ornimage += `<p class="ebs">${onimage.do}</p>`;
-// ornimage += `<p class="ebs">${onimage.location}</p>`;
-// ornimage += `<div class="bran-img"></div>`;
-// ornimage += `</div>`;
-// ornimage += `<div class="modal-footer">`;
-//    ornimage += `<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>`;
-// ornimage += `<div><a class="efriend" href="mailto: ${onimage.email}">contact ${onimage.name}</a></div>`;
-// ornimage += `</div>`;
-// ornimage += `</div>`;
-// ornimage += `</div>`;
-// ornimage += `</div>`;
-
-// $('#branching').html(ornimage);
 },{}],2:[function(require,module,exports){
 "use strict";
 let page=require ('./page'),
@@ -195,107 +153,299 @@ let page=require ('./page'),
     page.footer();
  
     });
-   
+
+
+ 
     $("#visitor").click(()=>{
         console.log("galler is visitor");
     
     });
 
-    $(".n3").click(() => {
-        console.log("galler is ready");
+    var buttonClicked;
+    $(".wedd").click(()=>{
+      if(buttonClicked!= true){
+        buttonClicked=true;
+        $('.are').hide();
+        $('.selga').hide();
+        $(".wed-text").css({ display:"inline" });
+        // alert('button clicked');
+    }else{
+
+    }
+    console.log("i dont know");
 
     });
+var buttonClicke;
+$(".eng").click(() => {
+    if (buttonClicke!= true) {
+        buttonClicke = true;
+        $('.we').hide();
+        $('.selga').hide();
+        $(".wed-text").css({ display: "inline" });
+        // alert('button clicked');
+    } else {
 
+    }
+    console.log("i dont know");
+
+});
 },{"./fetch":1,"./ornella":3,"./page":4}],3:[function(require,module,exports){
 "use strict";
+let $ = require('jquery'),
+fethc=require('./fetch');
+// console.log("ornella ready",fethc.loadOrnella);
+$(document).ready(function () {
+    // console.log("ready!");
+    const mainHome = () => {
+        let indexh = `
+      <section id="tri">
+            <div class="main-home"></div>
+            <div id="bg-aman">
+                <div id="bindex">
+                <div id="indexb"></div>
+                    </div>
+                <div class="colect">
+                        <p class="myNm"> Hi,My name is ...</p>
+                        <h1 class="anan" > Aman Zeru </h1>
+                        <div class="hor-line"></div>
+                        <h3 class="h3">Professional videographer &Photographer </h3>
+                    </div>
+     <a class="welcome"> <img id="visitor" src="./img/threeshape.png" alt="trianle aman" width="300px"></a>
 
-},{}],4:[function(require,module,exports){
-"use strict";
-let $= require('jquery');
-
-
-
-const nav = document.getElementById('test');
-function homePage() {
-    let navdisplay = $(
-        `<header id="my-header">
-        <div class="main-nav">
-            <div class="navlink n1"><a href="index.html">Home</a></div>
-            <div class="navlink n2"><a href="aman.html">Aman</a></div>
-            <div class="navlink n3"><a href="#">Gallery</a></div>
-            <div class = "navlink n4"><a href="http://localhost/ornella/OrnellaMedia/contact.php">Contact us</a> </div>
-            <div class="navlink n5"><a href="branch.html">Divisions</a></div>
-        </div> 
-        <div class="central-nav">
-            <a href="index.html"><img src="img/logoflower2.png" class="img-fluid" alt="ornella logo" width="150px"></a>
-            <div class="orn">Ornella Multi-Media</div>
-            <div class="creative">Creative Photographer and Videographer</div>
-        </div> 
-        <div class="right-nav"> 
-            <div class="legend">Habesha Photographer & Videographer</div>
-            <div class="line"></div> 
-            <div class="follow"> follow me on social media</div>
-            <div class="icon">
-            <a href="https://twitter.com/amanzerumesfin"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="https://www.instagram.com/aman_zeru/?hl=en"><i class="fab fa-instagram fa-2x"></i></a> 
-            <a href="https://www.facebook.com/begieZgreat/"><i class="fab fa-facebook fa-2x"></i></a>
-            </div> 
-        </div> 
-        </header>`);
-
-    $("#test").html(navdisplay);
-}
-homePage();
-
-const footer = () => {
-let footerh = `<div class="footer">
-                 <div class="fi">
-                <img src="./img/logoflower2.png" alt="textlogo" width="150px">
+            </div>
+                <div class="lowerlogo">
+                <a href="#!"><img src="./img/logoflower2.png" alt="trianle aman" class="lowerflower lflwr"></a>
                 </div>
-               <div class="footer2">
-                <div class="f">Home</div>
-                <div class="f">Contact Aman</div>
-                <div class="f">Gallery</div>
-                <div class="f">Branches Address</div>
-                </div> 
-                </div>`;
-    $("#footer").html(footerh);
-};
-footer();
+            <div class="threeIn1"></div>
+        <d class="container-fluid">
+         <div class="row ls">
+              <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                     </div>
+            <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
+            <h1 class="text-center about">About <span>Me</span></h1>
+                Hi there !We are Dan and Kelly Watson,
+                a husband and wife photography team based in Nashville,
+                Tennessee.We have been in business for over 10 years and Dan has photographed 
+                over 200 weddings.Our goal is to provide you with classic images that will stand 
+                the test of time and be cherished forever.We take a limited number of weddings
+                each year in order to give our clients the attention they deserve.
+            </div>
+            <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1" >
+             </div>
+            <div class="instagram">
+            <p> follow along on instagram @aman_zeru</p>
+            </div>
+        </section>
+     `;
+        $(".tri-aman").html(indexh);
+    };
+    mainHome();
+});
 
-const gallery=()=> {
-    console.log("hi");
-    let choose=`<div class="galleries">
-     <div class="wedground"><a href="gallery.html"><img src="./img/wedding.png" alt="trianle aman" width="300px"></a></div>
-     <div class="enground"><a ><img src="./img/engagmet.png" class="eng" alt="trianle aman" width="300px"></a></div>
-     <div class="gradground"><a href="#"><img src="./img/graduation.png" alt="trianle aman" width="300px"></a></div>
-     <div>
-     <img src="./img/africa.png" alt="trianle aman" width="100%" class="lowerlogo">
-     <a href="#!"><img src="./img/logoflower2.png" alt="trianle aman" width="15%" class="lowerflower"></a>
-    </div>     
-     <div class="zerumess d">
-    <p class="marriage">“You know when you have found your prince because you not only have a smile on your face, but in your heart as well.."</p>
-    </div> 
-    <div class="instagram"><p> follow along on instagram @aman_zeru</p></div>
-    </div>`;
-      $('#tri').html(choose);
-};
+// $(document).ready(function(){
+// const galleryHome = () => {
+//     let choose= `
+//     <a class="makda">wedding</a>
+//     <div class="selga">    
+//      <div id="hello" class="wedground"><a><img src="./img/wedding.png" alt="trianle aman" width="300px"></a></div>
+//      <div class="enground"><a><img src="./img/engagmet.png" class="eng" alt="trianle aman" width="300px"></a></div>
+//      <div class="gradground"><a><img src="./img/graduation.png" alt="trianle aman" width="300px"></a></div>
+//       <div class="lowerlogo"><a><img src="./img/logoflower2.png" alt="trianle aman" class="lowerflower"></a></div>
+//     <p class="q text-center">RECORDING <span>authentic</span>AND <span>intimate </span> TRADITIONAL WEDDINGS AS THEY ARE IN HOME</p>
+//     <div class="threeIn1"></div>
+//      <div class="zerumess d">
+//     <h5 class="marriage">“You know when you have found your prince because you not only have a smile on your face, but in your heart as well.."</h5>
+//     </div> 
+//     <div class="instagram">
+//    <p> follow along on instagram @@aman_zeru</p>
+//    </div>
+//    </div>
+//      `;
+//     $('.four-aman').html(choose);
+// };
+// galleryHome();
+// });
 
 
-$(".n3").click(function(){
-    console.log("gallery button clicked");
-    $(".main-home").remove();
-// $(".all-pic").remove();
-   return gallery();
+// $(".wedd").on('click', function(){
+//        console.log("hi");
+//   const galleryHome=()=>{ 
+//         let choose= `
+//         <li class="million">Million is here</li>
+// `;
+//        $('.tri-aman').html(choose);
+// };
+//       galleryHome();
+//   });
+$(document).ready(function () {
+//     $(".wedd").click(function () {
+//         $(".selga").hide();
+//         console.log("hi wedding pictures", fethc.loadOrnella);
+      
+//          const galleryHome=()=>{ 
+//         let choose= `
+//         <li class="million">Million is here</li>
+//        <div id="wedPic">
+//           <section></section>
+//        </div>
+// `;
+//        $('.four-aman').html(choose);
+// };
+//       galleryHome();
+//     });
+
+
+    $(".gradd").click(function () {
+        console.log("hi grad pictures");
+        //     $("#chgcolor").css("background-color", "green");
+    });
+
+    
 });
 
 
 
+module.exports=
+{
+    // galleryHome
+};
+},{"./fetch":1,"jquery":5}],4:[function(require,module,exports){
+"use strict";
+let $= require('jquery');
+const newNav = () => {
+console.log("new nav");
+let theNav=`
+<header id="my-header">
+        <div class="navbar navbar-expand-lg navbar-light bg-light">
+
+         <a class="navbar-brand orn" href="#">
+    <img src="img/logoflower2.png" width="38" height="35" class="d-inline-block align-top" alt="">
+   Ornella Multi-Media
+  </a>     
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <ul class="collapse navbar-collapse navfont" id="navbarText">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link n1" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link n2" href="aman.html">Aman</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link n3" href="gallery.html">Gallery</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link n4" href="http://localhost/ornella/OrnellaMedia/contactme.php">Contact Us</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link n4" href="branch.html">Branch</a>
+                    </li>
+                    </ul>
+                     <div class="central-nav">
+                        <a href="index.html"><img src="img/logoflower2.png" class="img-fluid" alt="ornella logo" width="150px"></a>
+                        <div class="orn">Ornella Multi-Media</div>
+                        <div class="creative">Creative Photographer and Videographer</div>
+                   </div> 
+                    <div class="navbar navbar-expand-sm bg-light justify-content-center">
+                    </div>
+            <span class="navbar-text m-2">
+            <div class="right-nav"> 
+            <div class="legend">Habesha Photographer & Videographer</div>
+            <div class="line"></div> 
+            <div class="follow"> follow me on social media </div>
+            <div class="icons">
+            <a href="https://twitter.com/amanzerumesfin"><img src="./../img/Twitterbird.png" width="30px height="25px"></a>
+            <a href="https://www.instagram.com/aman_zeru/"><img src="./../img/instagram.png" width="30px" height="25px"></a> 
+            <a href="https://www.facebook.com/begieZgreat/"><img src="./../img/facebook.png" width="30px" height="25px"></a>
+            </div>
+        </div>
+            </span>
+        </div>
+</na>
+        </header>
+`;
+    $("#godaddy").html(theNav);
+};
+newNav();
+
+
+
+
+
+ const footer = () => {
+let footerh = `<div class="nav footer">
+               <div class=""></div>
+                 <div class="fi">
+                <img src="./img/logoflower2.png" alt="textlogo" width="150px">
+                </div>
+               <div class="footer2 text-center">
+                <div class="f f1"><a href="#">Home</a><span>|</span></div>
+                <div class="f"><a href="#">Aman</a><span>|</span></div>
+                <div class="f"><a href="#">Gallery</a><span>|</span></div>
+                <div class="f"><a href="#">Branches</a></div>
+                </div> 
+                </div>`;
+    $("#footer").html(footerh);
+};
+
+
+
+footer();
+
+const lowerpart = () => {
+    // console.log("lower part of the page");
+    let thepart = `
+    <div class="d text-center">
+    <p class="h">RECORDING <span>authentic</span>AND <span>intimate </span> TRADITIONAL WEDDINGS AS THEY ARE IN HOME</p>
+    </div>
+    <div class="e"><img src="./img/logodesign.png" alt="textlogo" width="250px"></div>
+
+    <div class="a tinone"><a href="aman.html"><div class="meet"><div class="met"></div></div><p class="textAman">Meet Aman</p></a></div>
+    <div class="b tinone"><a href="#!"><div class="gal"><div class="met"></div></div><p class="textAman">Gallery</p></a></div>
+    <div class="c tinone"><a href="#!"><img src="./img/1plc.jpg" alt="spill" width="220px"><div class="met"></div><p class="textAman">Branches</p></a></div>
+    <div class="x tinone"><a href="#!"><img src="./img/1plc.jpg" alt="spill" width="220px"><div class="met"></div><p class="textAman">Branches</p></a></div>
+    <div class="y tinone"><a href="#!"><img src="./img/1plc.jpg" alt="spill" width="220px"><div class="met"></div><p class="textAman">Branches</p></a></div>
+    <div class="z tinone"><a href="#!"><img src="./img/1plc.jpg" alt="spill" width="220px"><div class="met"></div><p class="textAman">Branches</p></a></div>
+ 
+    `;
+    $(".threeIn1").html(thepart);
+};
+lowerpart();
+
+
+
+const lowerbranch = () => {
+    // console.log("lower part of the page");
+    let thepart = `
+    <div class="d text-center">
+    <p class="h">RECORDING <span>authentic</span>AND <span>intimate </span> TRADITIONAL WEDDINGS AS THEY ARE IN HOME</p>
+    </div>
+    <div class="e"><img src="./img/logodesign.png" alt="textlogo" width="250px"></div>
+     `;
+    $(".threeIn2").html(thepart);
+};
+lowerbranch();
+
+
+$('.form-control').on('click', function (e) {
+    e.preventDefault();
+    $(this).css('border', '2px solid #b9b1a7');
+});
+
+$('.submit').on('click', function (e) {
+    e.preventDefault();
+    $(this).css('background-color', '#ece5e7');
+    $(this).css('color','rgb(138, 135, 135)');
+});
 module.exports={
     footer,
-    homePage,
-//    gallery
+    newNav,
+    lowerpart
+
 };
+
 
 },{"jquery":5}],5:[function(require,module,exports){
 /*!
