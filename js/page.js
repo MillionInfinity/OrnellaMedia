@@ -44,9 +44,9 @@ let theNav=`
             <div class="line"></div> 
             <div class="follow"> follow me on social media </div>
             <div class="icons">
-            <a href="https://twitter.com/amanzerumesfin"><img src="./../img/Twitterbird.png" width="30px height="25px"></a>
-            <a href="https://www.instagram.com/aman_zeru/"><img src="./../img/instagram.png" width="30px" height="25px"></a> 
-            <a href="https://www.facebook.com/begieZgreat/"><img src="./../img/facebook.png" width="30px" height="25px"></a>
+            <a href="https://twitter.com/amanzerumesfin"></a>
+            <a href="https://www.instagram.com/aman_zeru/"></a> 
+            <a href="https://www.facebook.com/begieZgreat/"></a>
             </div>
         </div>
             </span>
