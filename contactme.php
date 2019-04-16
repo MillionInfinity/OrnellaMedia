@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Kristi|Parisienne" rel="stylesheet">
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Kristi|Parisienne" rel="stylesheet"/>
     <title>ORNELLA TRY</title>
-    <link rel="shortcut icon" type="image/png" href="img/logoflower1.png">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" type="image/png" href="img/logoflower1.png"/>
+    <link rel="stylesheet" href="./css/main.css"/>
 </head>
 
 <body>
@@ -27,10 +27,10 @@
                      </div>
                      <div class="ver-line"></div>
                  </div>
-                 <a class="welcome"><img id="visitor" src="./img/threeshape.png" alt="trianle aman" width="300px"></a>
+                 <a class="welcome"><img id="visitor" src="./img/threeshape.png" alt="trianle aman" width="300px"/></a>
              </div>
              <div class="lowerlogo">
-                 <a href="#!"><img src="./img/logoflower2.png" alt="trianle aman" class="lowerflower"></a>
+                 <a href="#!"><img src="./img/logoflower2.png" alt="trianle aman" class="lowerflower"/></a>
              </div>
                           
            <div>
