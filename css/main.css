@@ -213,6 +213,11 @@ body {
 p.h {
   margin-top: 5rem; }
 
+.links {
+  position: absolute;
+  top: 33rem !important;
+  left: 36rem; }
+
 * {
   box-sizing: border-box; }
 
@@ -651,6 +656,11 @@ body {
   .homeland {
     margin-top: 25%; }
 
+  .links {
+    position: absolute;
+    top: 43rem !important;
+    left: 28rem; }
+
   #bindex {
     position: initial;
     height: 100%; }
@@ -841,7 +851,12 @@ body {
     left: -4rem !important; }
     #contact-form textarea.form-control,
     #contact-form input.form-control {
-      width: 20rem; } }
+      width: 20rem; }
+
+  .links {
+    position: absolute;
+    top: 50rem !important;
+    left: 35%; } }
 * {
   box-sizing: border-box; }
 
@@ -1023,9 +1038,9 @@ h3 {
   z-index: 9; }
 
 .colect {
-  position: absolute;
+  position: relative;
   left: 18rem;
-  top: 55rem;
+  top: 35rem;
   padding: 2rem; }
 
 .about {

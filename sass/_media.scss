@@ -555,6 +555,14 @@ a{
  }
  .homeland{
      margin-top:25%;
+
+  
+ }
+ .links {
+     position: absolute;
+     top: 43rem !important;
+    //  top: 30.5rem !important;
+     left: 28rem;
  }
 
 #bindex {
@@ -781,6 +789,11 @@ top:23rem;
           .homeland{
               z-index:1100;
           }
+    //    .links {
+    //        position: absolute;
+    //        top: -32.5rem;
+    //        left: 10rem;
+    //    }
           #contact-form {
               position: absolute;
               left: -4rem !important;
@@ -789,4 +802,10 @@ top:23rem;
                   width:20rem;
               }
           }
+       .links {
+           position: absolute;
+           top: 50rem !important;
+           //  top: 30.5rem !important;
+           left:35%;
+       }
 }
