@@ -4,7 +4,7 @@
   "description": "A website for video Editor",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy":"gh-pages -d dist",
     "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },
   "repository": {
@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/MillionInfinity/OrnellaMedia/issues"
   },
-  "homepage": "https://github.com/MillionInfinity/OrnellaMedia#readme",
+  "homepage": "https://millioninfinity.github.io/OrnellaMedia/",
   "devDependencies": {
     "grunt": "^1.0.3",
     "grunt-browserify": "^5.3.0",
