@@ -215,7 +215,11 @@ p.h {
 
 .links {
   position: absolute;
+<<<<<<< HEAD
   top: 33rem !important;
+=======
+  top: 45rem !important;
+>>>>>>> master
   left: 36rem; }
 
 * {
@@ -523,7 +527,12 @@ body {
       margin-top: -2rem; }
     .footer2 span {
       color: white;
-      padding-left: 1.5rem; } }
+      padding-left: 1.5rem; }
+
+  .links {
+    position: absolute;
+    top: 40rem !important;
+    left: 35rem; } }
 @media screen and (max-width: 768px) {
   div.colect {
     margin-top: -47rem;
@@ -621,7 +630,12 @@ body {
       padding-left: 1.5rem; }
 
   #four {
-    margin-left: 4rem !important; } }
+    margin-left: 4rem !important; }
+
+  .links {
+    position: absolute;
+    top: 30rem !important;
+    left: 45rem; } }
 @media screen and (min-width: 500px) and (max-width: 767px) {
   .colect {
     margin-top: -13rem; }
@@ -699,7 +713,12 @@ body {
 
   #contact-form {
     position: absolute;
-    left: -8rem !important; } }
+    left: -8rem !important; }
+
+  .links {
+    position: absolute;
+    top: 48rem !important;
+    left: 28.4rem; } }
 @media screen and (max-width: 500px) {
   #branching {
     margin-left: -6rem; }

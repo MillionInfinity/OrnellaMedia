@@ -372,7 +372,11 @@ display:block;
      padding-left: 1.5rem;
  }
     }
-  
+  .links {
+      position: absolute;
+      top: 40rem !important;
+      left: 35rem;
+  }
 
 }
 @include mediaMd {
@@ -500,10 +504,13 @@ a{
  #four {
     
      margin-left:4rem !important;
-   
-
-
+    }
+ .links {
+     position: absolute;
+     top: 30rem !important;
+     left: 45rem;
  }
+
  }
 @include mediaSm {
     .colect{
@@ -618,6 +625,11 @@ a{
     position: absolute;
     left: -8rem !important;
  }
+  .links {
+      position: absolute;
+      top: 48rem !important;
+      left: 28.4rem;
+  }
 }
 @include mediaXsm {
     #branching{
@@ -802,10 +814,19 @@ top:23rem;
                   width:20rem;
               }
           }
+<<<<<<< HEAD
        .links {
            position: absolute;
            top: 50rem !important;
            //  top: 30.5rem !important;
            left:35%;
        }
+=======
+          .links {
+              position: absolute;
+              top: 50rem !important;
+              //  top: 30.5rem !important;
+              left: 35%;
+          }
+>>>>>>> master
 }
