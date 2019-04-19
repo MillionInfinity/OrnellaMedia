@@ -173,7 +173,7 @@
         "name": "Secondhand Serenade",
         "tele":"+2119356472",
         "do":"camera man, Editor,and wedding planner",
-        "imgs": "./../img/14.jpg",
+        "imgs": "img/14.jpg",
         "email":"milly@gmail.com"
     },
     {
@@ -181,7 +181,7 @@
         "name": "Secondhand Serenade",
         "tele": "+2119356472",
         "do": "camera man, Editor,and wedding planner",
-        "imgs": "./../img/14.jpg",
+        "imgs": "./img/14.jpg",
         "email": "amany@gmail.com"
     },
     {
@@ -189,7 +189,7 @@
         "name": "Secondhand Serenade",
         "tele": "+2119356472",
         "do": "camera man, Editor,and wedding planner",
-        "imgs": "./../img/14.jpg",
+        "imgs": "./img/14.jpg",
         "email": "dannyy@gmail.com"
     },
     {
@@ -197,7 +197,7 @@
         "name": "Secondhand Serenade",
         "tele": "+2119356472",
         "do": "camera man, Editor,and wedding planner",
-        "imgs": "./../img/14.jpg",
+        "imgs": "./img/14.jpg",
         "email": "issaky@gmail.com"
     }, {
         "location": "Kartoom, Sudan",
