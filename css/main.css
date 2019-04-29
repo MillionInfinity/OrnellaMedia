@@ -215,11 +215,7 @@ p.h {
 
 .links {
   position: absolute;
-<<<<<<< HEAD
   top: 33rem !important;
-=======
-  top: 45rem !important;
->>>>>>> master
   left: 36rem; }
 
 * {
